@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'calibri';
    
 }
 
@@ -18,7 +19,7 @@ html, body {
 
 .content {
     flex: 1;
-    
+
 }
 
 .formularios {
@@ -28,7 +29,6 @@ html, body {
     margin: auto;
     padding: 30px;
     margin-top: 170px;
-    font-family: 'calibri';
     border-radius: 8px;    
     margin-bottom: 230px; 
 }
@@ -63,13 +63,11 @@ html, body {
 
 .footer {
     background-color: white;
-    padding: 15px;
     height: 140px;
     width: 100%;
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    
 }

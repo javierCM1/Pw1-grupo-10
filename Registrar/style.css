@@ -57,10 +57,9 @@ body, html {
 
 .footer {
     background-color: white;
-    padding: 15px;
-    font-size: 15px;
+    font-size: 20px;
+    height: 140px;
     text-align: center;
-   
 }
 
 .premium{
