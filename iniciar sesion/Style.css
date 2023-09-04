@@ -41,6 +41,8 @@ html, body {
 .titulo {
     font-size: 23px;
     margin: 7px; 
+    margin-top: 20px;
+    
 }
 
 .inp {
@@ -63,7 +65,7 @@ html, body {
 }
 
 
-.footer {
+footer {
     background-color: #333;
     height: 140px;
     padding: 10px;
