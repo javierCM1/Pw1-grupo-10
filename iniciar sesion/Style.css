@@ -12,12 +12,13 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 
 .content {
     flex: 1;
-    
+ 
 }
 
 
@@ -50,7 +51,10 @@ html, body {
     padding: 18px;
     border-radius: 8px;
     border: 1px solid black; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
 
 .boton {
     margin-top: 18px;
@@ -63,7 +67,6 @@ html, body {
     color: aliceblue;
     background-color: #333;
 }
-
 
 footer {
     background-color: #333;
