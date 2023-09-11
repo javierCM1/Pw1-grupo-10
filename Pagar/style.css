@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content {
+    flex: 1; 
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    justify-content: end;
+    
+}
+
+.usuario-nombre{
+    margin-bottom: 0;
+}
+
+.usuario-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+footer {
+    background-color: white;
+    height: 140px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    width: auto;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+    margin-top: 7px;
+    font-size: 40px;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    padding: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    
+}
+
+.contenedor img{
+    width: 300px;
+    
+}
+
+.plan{
+    font-size: 23px;
+    margin-left: 25px;
+    justify-content: center;
+    margin-right: 35px;
+    width: 700px;
+}
+
+
+.columnas-datos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+
+}
+.datos{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+
+    
+}
+input{
+    width: 200px;
+    border: 1px solid black;
+
+}
+.datos p{
+    font-size: 20px;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    margin-bottom: 45px;
+    padding: 20px;
+
+}
+.boton {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    width: 200px;
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 6px;
+
+    
+
+
+}
+
