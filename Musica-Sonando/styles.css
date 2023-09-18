@@ -1,0 +1,130 @@
+body{
+    font-family: Arial, sans-serif;
+}
+.usuario {
+    grid-area: usuario;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    
+    justify-content: end;
+    
+}
+
+.usuario-nombre{
+    margin-bottom: 0;
+}
+
+.usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna reproductor reproductor reproductor reproductor"
+        "footer footer footer footer footer";
+    height: 100vh;
+
+}
+
+
+.columna {
+    grid-area: columna;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+
+}
+
+.item,
+.reproduciendo {
+    border: 1px solid black;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "titulo titulo usuario usuario"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "cuerpo cuerpo cuerpo cuerpo";
+
+}
+
+.titulo {
+    grid-area: titulo;
+    border: 1px solid black;
+}
+
+
+
+.cuerpo {
+    grid-area: cuerpo;
+    display: grid;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    grid-template-areas:
+    "play seccion seccion seccion seccion"
+    "play cancion album duracion reproduccion"
+    "play cancion album duracion reproduccion"
+    "play cancion album duracion reproduccion"
+    "play cancion album duracion reproduccion";
+    border: 1px solid black;
+}
+
+.seccion{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seccion1{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.seccion2{
+    border: 1px solid black;
+}
+.seccion3{
+    border: 1px solid black;
+}
+.seccion4{
+    border: 1px solid black;
+}
+
+.play{
+    grid-area: play;
+    border: 1px solid black;
+}
+
+
+
+.reproductor {
+    border: 1px solid black;
+    grid-area: reproductor;
+}
+
+
+footer {
+    border: 1px solid black;
+    grid-area: footer;
+}
