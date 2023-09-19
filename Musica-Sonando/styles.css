@@ -155,6 +155,29 @@ body{
 .reproductor {
     border: 1px solid black;
     grid-area: reproductor;
+    display: flex;
+    justify-content: center;
+
+
+}
+.barra-reproduccion {
+    
+    height: 115px;
+    width: 770px;
+}
+
+.volumen{
+    position: relative;
+    height: 7px;
+    width: 100px;
+    top: 35%;
+    left: 11%;
+}
+.bi bi-volume-mute-fill{
+    position: relative;
+    top: 35%;
+    left: 11%;
+
 }
 
 
