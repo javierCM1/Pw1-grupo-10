@@ -1,13 +1,24 @@
 body{
     font-family: Arial, sans-serif;
 }
-.usuario {
+
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-size: 28px;
+}
+h1{
+
+    margin-left: 10px;
+}
+.usuario-info {
     grid-area: usuario;
-    border: 1px solid black;
     display: flex;
     align-items: center;
-    
-    justify-content: end;
+    justify-content: flex-end;
+    margin-top: 10px;
     
 }
 
@@ -15,7 +26,7 @@ body{
     margin-bottom: 0;
 }
 
-.usuario img {
+.usuario-info img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -48,18 +59,29 @@ body{
 
 }
 
-.item,
-.reproduciendo {
+.item
+ {
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.item :hover{
+
 }
 
+.reproduciendo {
+    border: 1px solid black;
+
+}
 .main {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
-        "titulo titulo usuario usuario"
+        "titulo titulo titulo usuario"
         "cuerpo cuerpo cuerpo cuerpo"
         "cuerpo cuerpo cuerpo cuerpo"
         "cuerpo cuerpo cuerpo cuerpo"
@@ -173,11 +195,21 @@ body{
     top: 35%;
     left: 11%;
 }
-.bi bi-volume-mute-fill{
-    position: relative;
-    top: 35%;
-    left: 11%;
 
+.bi.bi-file-play-fill{
+    position: relative;
+    right: 43px;
+    top: 30%;
+}
+.bi.bi-arrows-angle-expand{
+    position: relative;
+    left: 190px;
+    top: 30%;
+}
+.bi.bi-volume-mute-fill{
+    position: relative;
+    right: 27px;
+    top: 30%;
 }
 
 
