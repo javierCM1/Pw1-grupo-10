@@ -1,0 +1,219 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-size: 28px;
+}
+h1{
+
+    margin-left: 10px;
+}
+.usuario-info {
+    grid-area: usuario;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    
+}
+
+.usuario-nombre{
+    margin-bottom: 0;
+}
+
+.usuario-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna main main main main"
+        "columna reproductor reproductor reproductor reproductor"
+        "footer footer footer footer footer";
+    height: 100vh;
+
+}
+
+
+.columna {
+    grid-area: columna;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+
+}
+
+.item
+ {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.item :hover{
+
+}
+
+.reproduciendo {
+    border: 1px solid black;
+
+}
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "titulo titulo titulo usuario"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "cuerpo cuerpo cuerpo cuerpo";
+
+}
+
+.titulo {
+    grid-area: titulo;
+    border: 1px solid black;
+}
+
+
+
+.cuerpo {
+    grid-area: cuerpo;
+    display: grid;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 27px;
+    grid-template-columns:100px repeat(4, 1fr) 30px ;
+    grid-template-rows: repeat(5, 1fr);
+
+
+
+    grid-template-areas:
+    "play seccion seccion seccion seccion barra"
+    "play cancion album duracion reproduccion barra"
+    "play cancion album duracion reproduccion barra"
+    "play cancion album duracion reproduccion barra"
+    "play cancion album duracion reproduccion barra" ;
+    border: 1px solid black;
+}
+
+.barra{
+    grid-area: barra;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+    
+
+}
+.barra img{
+    width: 100px;
+    height:520px
+}
+
+
+
+.seccion{
+    border: 1px solid black;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seccion1,
+.seccion2,
+.seccion3,
+.seccion4 {
+    border: 1px solid black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.seccion1 svg,
+.seccion2 svg {
+    position: relative;
+    bottom: 30%;
+    left: 50%;
+
+} 
+
+.seccion1 p,
+.seccion2 p,
+.seccion3 p,
+.seccion4 p {
+    margin-left: 7px;
+}
+
+.play{
+    grid-area: play;
+    border: 1px solid black;
+}
+
+
+
+.reproductor {
+    border: 1px solid black;
+    grid-area: reproductor;
+    display: flex;
+    justify-content: center;
+
+
+}
+.barra-reproduccion {
+    
+    height: 115px;
+    width: 770px;
+}
+
+.volumen{
+    position: relative;
+    height: 7px;
+    width: 100px;
+    top: 35%;
+    left: 11%;
+}
+
+.bi.bi-file-play-fill{
+    position: relative;
+    right: 43px;
+    top: 30%;
+}
+.bi.bi-arrows-angle-expand{
+    position: relative;
+    left: 190px;
+    top: 30%;
+}
+.bi.bi-volume-mute-fill{
+    position: relative;
+    right: 27px;
+    top: 30%;
+}
+
+
+footer {
+    border: 1px solid black;
+    grid-area: footer;
+}
