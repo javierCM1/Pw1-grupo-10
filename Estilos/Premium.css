@@ -39,3 +39,17 @@ footer {
     justify-content: center;
     align-items: center;
 }
+.Plan_Solo img{
+    height: 125px;
+}
+.Plan_DUO img{
+    height: 125px;
+}
+.Plan_Familiar img{
+    height: 125px;
+    justify-content: center;
+}
+.Plan_Solo{
+    background-color: #ada7a7;
+
+}
