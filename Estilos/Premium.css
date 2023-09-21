@@ -91,12 +91,18 @@ footer {
     margin-bottom: 15px;
 }
 .Lista_Solo{
+    display: block;
+    height: 9%;
     text-align: left;
 }
 .Lista_DUO{
+    display: block;
+    height: 29%;
     text-align: left;
 }
 .Lista_Familiar{
+    display: block;
+    height: 20%;
     text-align: left;
     
 }
