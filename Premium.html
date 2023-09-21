@@ -24,33 +24,35 @@
                     <h2>Solo</h2>
                     <img src="imagenes/Solo.png">
                     <h3>Para el solista</h3>
-                    <ul>
+                    <ul class="Lista_Solo">
                         <li>Un solo usuario, musica ilimitada</li>
                         <li>Accede a toda la musica sin publicidades</li>
                     </ul>
-                    <input type="radio" name="plan" value="1" required>Ars $500/Mes</input>
+                    <input type="radio" class="radio_solo" name="plan" id="plan1" value="1" required>
+                        <label for="plan1">ARS $500/Mes</label>
+                    </input>
                 </article>
                 <article id="Plan_DUO" class="Plan_DUO">
                     <h2>Duo</h2>
-                    <h3>Porque la musica se comparte</h3>
                     <img src="imagenes/duo.png">
-                    <ul>
+                    <h3>Porque la musica se comparte</h3>
+                    <ul class="Lista_DUO">
                         <li>Dos usuarios, musica ilimitada</li>
                         <li>Accede a toda la musica sin publicidades</li>
                         <li>Playlists de recomendaciones compartidas</li>
                     </ul>
-                    <input type="radio" name="plan" value="2"required>Ars $800/Mes</input>
+                    <input type="radio" name="plan" value="2"required class="radio_duo">ARS $800/Mes</input>
                 </article>
                 <article id="Plan_Familiar" class="Plan_Familiar">
                     <h2>Familiar</h2>
                     <img src="imagenes/Familiar.png">
                     <h3>Para vos y tu "Banda"</h3>
-                    <ul>
+                    <ul class="Lista_Familiar">
                         <li>Cuatro usuarios, musica ilimitada</li>
                         <li>Accede a toda la musica sin publicidades</li>
                         <li>Playlists de recomendaciones compartidas</li>
                     </ul>
-                    <input type="radio" name="plan" value="3" required>Ars $1500/Mes</input>
+                    <input type="radio" name="plan" value="3" required class="radio_familiar">ARS $1500/Mes</input>
                 </article>
             </section>
             <section id="Botones" class="Botones">

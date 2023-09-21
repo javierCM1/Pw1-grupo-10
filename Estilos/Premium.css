@@ -1,22 +1,27 @@
 body{
-    margin: 0;
+    height: 100%;
+    margin: 0%;
     font-family: Arial, sans-serif;
     background-color: white;
 }
 header{
     height: 10%;
-    width: 100%;
-    background-color: #333;
+    background-color: black;
     color: white;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
+    display: flex;
     padding: 10px;
+    position: relative;
+    margin-bottom: 30px;
 }
 .usuario-info {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    color: green;
+    position:absolute;
+    right: 15px;
+    top: 5px;
+    font-weight: 700;
 }
 
 .usuario-nombre{
@@ -33,23 +38,68 @@ header{
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: black;
+    color: green;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 10%;
+    font-weight: 700;
+}
+.Planes{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 .Plan_Solo img{
-    height: 125px;
+    height: 20%;
 }
 .Plan_DUO img{
-    height: 125px;
+    height: 20%;
 }
 .Plan_Familiar img{
-    height: 125px;
-    justify-content: center;
+    height: 20%;
 }
 .Plan_Solo{
     background-color: #ada7a7;
-
+    width: 20%;
+    border-radius: 5%;
+    text-align: center;
+    position: relative;
+    margin-right: 10px;
+}
+.Plan_DUO{
+    background-color: #ada7a7;
+    width: 20%;
+    border-radius: 5%;
+    text-align: center;
+    margin-right: 10px;
+}
+.Plan_Familiar{
+    background-color: #ada7a7;
+    width: 20%;
+    border-radius: 5%;
+    text-align: center;
+}
+.Botones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.Lista_Solo{
+    text-align: left;
+    font-size: 130%;
+}
+.Lista_DUO{
+    text-align: left;
+    font-size: 130%;
+}
+.Lista_Familiar{
+    text-align: left;
+    font-size: 130%;
+}
+.radio_solo{
+    position: absolute;
+    bottom: 30px;
 }
