@@ -2,11 +2,11 @@ body{
     height: 100%;
     margin: 0%;
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: black;
 }
 header{
     height: 10%;
-    background-color: black;
+    background-color:  #333;;
     color: white;
     display: flex;
     padding: 10px;
@@ -38,12 +38,12 @@ header{
 footer {
     text-align: center;
     padding: 10px;
-    background-color: black;
+    background-color:  #333;;
     color: green;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 100%;
     font-weight: 700;
 }
 .Planes{
@@ -68,6 +68,7 @@ footer {
     text-align: center;
     position: relative;
     margin-right: 10px;
+    font-size: 130%;
 }
 .Plan_DUO{
     background-color: #ada7a7;
@@ -75,12 +76,14 @@ footer {
     border-radius: 5%;
     text-align: center;
     margin-right: 10px;
+    font-size: 130%;
 }
 .Plan_Familiar{
     background-color: #ada7a7;
     width: 20%;
     border-radius: 5%;
     text-align: center;
+    font-size: 130%;
 }
 .Botones{
     display: flex;
@@ -89,17 +92,36 @@ footer {
 }
 .Lista_Solo{
     text-align: left;
-    font-size: 130%;
 }
 .Lista_DUO{
     text-align: left;
-    font-size: 130%;
 }
 .Lista_Familiar{
     text-align: left;
-    font-size: 130%;
+    
 }
 .radio_solo{
-    position: absolute;
-    bottom: 30px;
+    display: flex;
+    margin-top:20%;
+    justify-content: center;
+
+}
+.radio_familiar{
+    display: flex;
+    margin-top:20%;
+    justify-content: center;
+}
+.boton{
+    height: 50px;
+    width: 20%;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none; 
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 700;
 }
