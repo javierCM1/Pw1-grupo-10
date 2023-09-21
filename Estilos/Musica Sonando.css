@@ -34,6 +34,24 @@ h1{
     margin-left: 10px;
 }
 
+.reproduciendo{
+    display: flex;
+    flex-direction: column;
+    max-width: min-content;
+
+
+}
+.reproduciendo-descripcion{
+    position: relative;
+    margin: 12%;
+}
+
+.reproduciendo img{
+    width: 200px;
+    height: 200px;
+    
+}
+
 
 .container {
     display: grid;
@@ -55,8 +73,10 @@ h1{
 
 .columna {
     grid-area: columna;
+    background-color: #f1f1f1;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+    grid-template-rows: 100px 100px 100px 100px 3fr;
+    grid-template-columns: 300px;
 
 }
 
@@ -68,16 +88,11 @@ h1{
     align-items: center;
     font-size: 25px;
 }
-.item :hover{
 
-}
 
-.reproduciendo {
-    border: 1px solid black;
-
-}
 .main {
     grid-area: main;
+    margin: 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -101,41 +116,32 @@ h1{
     grid-area: cuerpo;
     display: grid;
     margin-top: 20px;
-    margin-left: 20px;
+    
     margin-bottom: 20px;
     margin-right: 27px;
-    grid-template-columns:100px repeat(4, 1fr) 30px ;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns:100px repeat(4, 1fr)  ;
+    grid-template-rows: repeat(7, 100px);
+    overflow-y: scroll;
 
 
 
     grid-template-areas:
-    "play seccion seccion seccion seccion barra"
-    "play cancion album duracion reproduccion barra"
-    "play cancion album duracion reproduccion barra"
-    "play cancion album duracion reproduccion barra"
-    "play cancion album duracion reproduccion barra" ;
+    "play seccion seccion seccion seccion"
+    "play cancion album duracion reproduccion"
+    "play cancion album duracion reproduccion"
+    "play cancion album duracion reproduccion"
+    "play cancion album duracion reproduccion" ;
     border: 1px solid black;
+    
 }
 
-.barra{
-    grid-area: barra;
-    display: flex;
-    justify-content: center;
-    
-    
-    
-    
 
-}
-.barra img{
-    width: 100px;
-    height:520px
-}
+
 
 
 
 .seccion{
+    
     border: 1px solid black;
     font-size: 27px;
     display: flex;
@@ -148,7 +154,7 @@ h1{
 .seccion4 {
     border: 1px solid black;
     font-size: 20px;
-    display: flex;
+    display: block;
     align-items: center;
     
     
@@ -156,8 +162,8 @@ h1{
 .seccion1 svg,
 .seccion2 svg {
     position: relative;
-    bottom: 30%;
-    left: 50%;
+    bottom: 60%;
+    left: 80%;
 
 } 
 
