@@ -29,8 +29,8 @@
                         <li>Accede a toda la musica sin publicidades</li>
                     </ul>
                     <div class="radio_solo"> 
-                        <input type="radio" class="radio_solo" name="plan" id="plan1" value="1" required></input>
-                        <label for="plan1" class="radio_solo">ARS $500/Mes</label>
+                        <input type="radio"name="plan" id="plan1" value="1" required></input>
+                        <label for="plan1">ARS $500/Mes</label>
                     </div>
                 </article>
                 <article id="Plan_DUO" class="Plan_DUO">
@@ -42,7 +42,10 @@
                         <li>Accede a toda la musica sin publicidades</li>
                         <li>Playlists de recomendaciones compartidas</li>
                     </ul>
-                    <input type="radio" name="plan" value="2"required class="radio_duo">ARS $800/Mes</input>
+                    <div class="radio_duo">
+                        <input type="radio" name="plan"  id="plan2" value="2"required></input>
+                        <label for="plan2">ARS $800/Mes</label>
+                    </div>
                 </article>
                 <article id="Plan_Familiar" class="Plan_Familiar">
                     <h2>Familiar</h2>
@@ -61,7 +64,7 @@
                 </article>
             </section>
             <section id="Botones" class="Botones">
-                    <a href="vista-principal.html" class="boton">Atras</a> 
+                    <a href="vista-principal.html" class="boton">Atras</a>
                     <button type="submit" class="boton" id="a_Pagar"> Siguiente</button>
             </section>
         </form>
