@@ -1,0 +1,250 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        "lateral header header header header header"
+        "lateral main main main main main"
+        "lateral main main main main main"
+        "lateral main main main main main"
+        "lateral main main main main main"
+        "lateral main main main main main"
+        "lateral main main main main main"
+        "lateral reproductor reproductor reproductor reproductor reproductor";
+    gap: 1px;
+    height: 100vh;
+
+}
+
+#barra-izquierda {
+    grid-area: lateral;
+    padding: 20px;
+    background-color: #f1f1f1;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+ul {
+    padding-inline-start: 0%;
+    list-style-type: none;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+}
+
+li {
+    display: flex;
+    padding: 10%;
+    border-bottom: 1px solid #cccccc;
+
+}
+
+li>a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+li:last-child {
+    border-bottom: none;
+
+
+}
+
+
+li:hover {
+    background-color: #dddddd;
+}
+
+
+
+#descripcion {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#descripcion-contenedor {
+    display: flex;
+    flex-direction: column;
+    max-width: min-content;
+}
+
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    align-items: center;
+}
+
+
+
+#usuario {
+    text-align: right;
+    flex-direction: column;
+    font-weight: bold;
+
+}
+
+#icono {
+    justify-content: center;
+}
+
+#iconoimg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+.sesion {
+    color: #4ead00;
+    font-weight: normal;
+}
+
+
+main {
+    grid-area: main;
+    height: 100%;
+    margin: 0 2%;
+    overflow-y: auto;
+}
+
+
+.item-imagen {
+    position: relative;
+    margin: 10px;
+}
+
+
+.estrella-label {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid yellow;
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+    cursor: pointer;
+}
+
+.estrella-checkbox {
+    display: none;
+}
+
+.estrella-checkbox:checked+.estrella-label {
+    background-color: yellow;
+}
+
+
+
+.reproductor {
+    grid-area: reproductor;
+    margin: 1%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.controles {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-play,
+.boton-pausa {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.barra-progreso {
+    width: 80%;
+    height: 5px;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+
+.progreso {
+    height: 100%;
+    background-color: #333;
+    width: 30%;
+    /* Ajusta el porcentaje según el progreso */
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    height: 100%;
+    text-align: center;
+    padding: 50px;
+    margin-top: 5px
+}
+
+@media (max-width: 600px) {
+
+    body {
+        display: block;
+    }
+
+#barra-izquierda{
+    width: 100%;
+    padding:5%;
+}
+
+    #contenedor {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 10% 80% 10%;
+        grid-template-areas:
+        "header header"
+        "lateral main"
+        "reproductor reproductor"
+           
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 50% 30% 20%;
+    }
+
+
+    #imagen-lateral {
+        width:100px;
+        height:100px
+
+    }
+   
+}

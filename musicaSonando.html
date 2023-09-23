@@ -1,243 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilos/Musica Sonando.css">
-    <title>Musica Sonando</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SPOTILAM · Mis canciones favoritas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="Estilos/estilo-general.css">
+    <link rel='stylesheet' href='Estilos/Favoritas.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+
 <body>
-    <main class="container">
-        <div class="columna">
-            <div class="item">
-                 <a href="vista-principal.html">Home</a>
-            </div>
-            <div class="item">
-                <a href="buscar.html">Buscar</a>
-            </div>
-            <div class="item">
-                <a href="">Mis albums</a>
-            </div>
-            <div class="item">
-                <a href="favoritas.html">Mis Favoritas</a>
-            </div>
-           
-                <div class="reproduciendo">
-                    <div class="reproduciendo-descripcion">
 
-                        <img src="imagenes/albumcover1.jpg" alt="">
-                        
-                        <p></p>
-                        
-                    </div>
-            </div>
-    
+
+    <div id="contenedor">
+
+
+
+        <div id="barra-izquierda">
+            <nav>
+                <ul>
+                    <li><a href="vista-principal.html">Home </a></li>
+                    <li><a href="buscar.html">Buscar</a></li>
+                    <li><a href="mis-albums.html">Mis albums</a></li>
+                    <li><a href="favoritas.html">Mis favoritas</a></li>
+
+                </ul>
+            </nav>
+            <section id="descripcion-contenedor">
+                <div class="item-imagen">
+                    <img src="imagenes/albumcover1.jpg" alt="Imagen 1" width="200" height="200" id="imagen-lateral">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella16">
+                    <label class="estrella-label" for="estrella16"></label>
+                </div>
+                <p id="descripcion">X (Multiply) es el segundo álbum de Ed Sheeran, que cuenta como primer single
+                    con Sing, una canción en la que colabora Pharrell Williams. Las canciones que forman parte de X
+                    fueron compuestas durante la gira de +, como un reflejo real de su vida y de sus relaciones.
+            </section>
         </div>
-    
-        <section class="main">
-            
-            <div class="header-info" style="display: flex;">
-                <h1>SPOTILAM</h1>
+
+        <header>
+
+            <h1>SPOTILAM</h1>
+
+            <div id="usuario">Nombre de usuario</span>
+                <a href="index.html" class="sesion">Cerrar sesión</a>
             </div>
-                <div class="usuario-info">
-                    <span>
-                        <p class="usuario-nombre">Nombre Usuario</p>
-                        <a href="">Cerrar sesión</a>
-                    </span>
-                    
-                    <img src="imagenes/usericon.jpg" alt="Usuario">
-            
+            <div id="icono"><a href="Registrar.html"><img src="imagenes/usericon.jpg" alt="Foto de perfil"
+                        id="iconoimg"></a>
             </div>
-                <article class="cuerpo">
-            
-                        <div class="seccion"></div>
-                        <div class="seccion">Cancion</div>
-                        <div class="seccion">Album</div>
-                        <div class="seccion">Duracion</div>
-                        <div class="seccion">Reproducciones</div>
-                    
-                        
 
-                     
+        </header>
+        <main>
 
-                    
-                    <!----------------------------Cancion 1 One - Ed Sheran ------------------------------>
-                        <div class="seccion">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                              </svg>
+            <article id="tabla">
+                <div id="fila-uno">
+                    <div></div>
+                    <div>Canción</div>
+                    <div>Album</div>
+                    <div>Duración</div>
+                    <div>Reproducciones</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg></div>
+                    <div class="tema">
+                        One
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
                         </div>
-                        <div class="seccion1">
-                                <p>One</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion2">
-                                <p>X(Deluxe edition)</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion3">
-                            <p>4:12</p>
-                        </div>
-                        <div class="seccion4">
-                            <p>10.200.000</p>
-                        </div>
-                    
-                     <!----------------------------Cancion 2 Sing - Ed Sheran ------------------------------>
-                        <div class="seccion">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion1">
-                                <p>Sing</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion2">
-                                <p>X(Deluxe Edition)</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion3">
-                            <p>3:55</p>
-                        </div>
-                        <div class="seccion4">
-                            <p>20.000.000</p>
-                        </div>
-                    
-                     <!----------------------------Cancion 3 Photograph - Ed Sheran ------------------------------>
-                        <div class="seccion">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion1">
-                                <p>Photohgraph</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion2">
-                                <p>X(Deluxe Edition)</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion3">
-                            <p>4:18</p>
-                        </div>
-                        <div class="seccion4">
-                            <p>200.000.000</p>
-                        </div>
-                    
-                     <!----------------------------Cancion 4 runAway - Ed Sheran ------------------------------>
-                        <div class="seccion">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion1">
-                                <p>Runaway</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion2">
-                                <p>X(Deluxe Edition)</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion3">
-                            <p>4:32</p>
-                        </div>
-                        <div class="seccion4">
-                            <p>33.000.000</p>
-                        </div>
-
-
-                         <!----------------------------Cancion 5 nina - Ed Sheran ------------------------------>
-                        <div class="seccion">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion1">
-                                <p>Nina</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion2">
-                                <p>X(Deluxe Edition) </p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion3">
-                            <p>4:02</p>
-                        </div>
-                        <div class="seccion4">
-                            <p>52.000.000</p>
-                        </div>
-                     <!----------------------------Cancion 6 the man - Ed Sheran ------------------------------>
-                        <div class="seccion">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion1">
-                                <p>The Man</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion2">
-                                <p>X(Deluxe Edition)</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                              </svg>
-                        </div>
-                        <div class="seccion3">
-                            <p>4:32</p>
-                        </div>
-                        <div class="seccion4">
-                            <p>20.000.000</p>
-                        </div>
-
-                        
-
-                </article>
-                
-            
-            
-        </section>
-                    <div class="reproductor">
-                            <img src="imagenes/barra-de-reproduccion.jpg" alt="" class="barra-reproduccion">
-                            <img src="imagenes/subir-volumen.jpg" alt="" class="volumen">
-                           
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/>
-                              </svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-play-fill" viewBox="0 0 16 16">
-                                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43V5.884z"/>
-                              </svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-mute-fill" viewBox="0 0 16 16" >
-                                <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"/>
-                              </svg>
-
                     </div>
-            
-            <footer>
-                footer
-            </footer>
-    </main>
-            
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>4:21</div>
+                    <div>12,434,345</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="tema">
+                        Sing
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>5:22</div>
+                    <div>12,344,463</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg></div>
+                    <div class="tema">
+                        Photograph
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>3:33</div>
+                    <div>13,309,613</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg></div>
+                    <div class="tema">
+                        Runaway 
+                        <div class="estrella"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="white" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>4:02</div>
+                    <div>10,384,845</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="tema">
+                        Nina
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>5:35</div>
+                    <div>23,484,454</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg></div>
+                    <div class="tema">
+                       The Man
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>3:09</div>
+                    <div>11,928,355</div>
+                </div>
+                <div class="fila">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="45" height="48" viewBox="0 0 48 48" id="play">
+                            <path
+                                d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z">
+                            </path>
+                        </svg></div>
+                    <div class="tema">
+                        Bloodstream
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>X (Deluxe edition)
+                        <div class="estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path stroke-width="1.2px" stroke="black"
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>4:19</div>
+                    <div>12,934,235</div>
+                </div>
+            </article>
+
+
+        </main>
+
+        <section class="reproductor">
+            <div class="controles">
+                <button class="boton-play"><i class="fas fa-play"></i></button>
+                <button class="boton-pausa"><i class="fas fa-pause"></i></button>
+            </div>
+            <div class="barra-progreso">
+                <div class="progreso"></div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        Integrante 1 (Nombre, Apellido y DNI)
+        <br>Integrante 2 (Nombre, Apellido y DNI)
+        <br>Integrante 3 (Nombre, Apellido y DNI)
+        <br>Integrante 4 (Nombre, Apellido y DNI)
+        <br>Integrante 5 (Nombre, Apellido y DNI)
+
+    </footer>
+
+
+
 </body>
+
 </html>
