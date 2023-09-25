@@ -219,7 +219,7 @@ footer {
 }
 
 
-@media (min-width: 500px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 800px) {
     .contenedor {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
@@ -244,7 +244,7 @@ footer {
    
 }
 
-@media (min-width: 200px) and (max-width: 499px) {
+@media (min-width: 200px) and (max-width: 599px) {
     .contenedor {
         grid-template-columns: repeat(1, 1fr); 
         grid-template-areas:
@@ -292,4 +292,5 @@ footer {
         align-items: center;
         text-align: center;
     }
+    
 }
