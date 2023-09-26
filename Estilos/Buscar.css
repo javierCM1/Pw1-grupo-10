@@ -1,7 +1,7 @@
 
 li:nth-child(2) {
 
-    background-color: #cccccc;
+    background-color: #333;
 
 }
 
@@ -31,6 +31,7 @@ button[type="submit"] {
     border-radius: 0 40px 40px 0;
     background: url(/imagenes/botonbuscar.png) no-repeat center;
     background-size: 20px;
+    color: white;
 
 }
 #galeria-imagenes {

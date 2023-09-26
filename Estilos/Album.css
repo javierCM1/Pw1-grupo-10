@@ -1,14 +1,9 @@
 li:nth-child(3) {
 
-    background-color: #cccccc;
+    background-color: #333;
 
 }
 
 li:first-child{
-    background-color:  #f1f1f1;
-}
-
-li:first-child:hover{
-   
-    background-color: #dddddd;
+    background-color:  #282828;
 }

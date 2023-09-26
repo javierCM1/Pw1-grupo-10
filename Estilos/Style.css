@@ -6,7 +6,7 @@
 }
 
 html, body {
-    background-color: #f0f2f5;
+    background-color: #101010;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -23,10 +23,11 @@ html, body {
 .formularios {
     width: 100%;
     max-width: 400px;
-    background-color: white;
+    background-color: #242424;
     padding: 1.5em;
     border-radius: 8px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .a {
@@ -55,14 +56,16 @@ html, body {
     padding: 0.6rem;
     border-radius: 8px;
     font-size: 1.5rem;
-    color: aliceblue;
+    color: white;
     background-color: #333;
 }
-
+.Registrarse{
+    color: #1ED760;
+}
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #282828;
     color: white;
     flex-direction: column;
     justify-content: center;

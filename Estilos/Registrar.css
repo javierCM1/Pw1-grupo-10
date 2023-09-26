@@ -6,7 +6,7 @@
 }
 
 body, html {
-    background-color: #f0f2f5;
+    background-color: #101010;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,8 @@ body, html {
 .formulario {
     width: 100%;
     max-width: 550px;
-    background-color: white;
+    background-color: #242424;
+    color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -67,7 +68,7 @@ body, html {
 
 .a {
     font-size: 0.9rem;
-    color: blue;
+    color: #1ED760;
     margin-bottom: 10px;
 }
 
@@ -75,12 +76,13 @@ body, html {
     height: 50px;
     width: 48%;
     font-size: 1rem;
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: black;
     border-radius: 4px;
     text-align: center;
     line-height: 50px;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .usuario-info {
@@ -88,6 +90,7 @@ body, html {
     align-items: center;
     margin: 20px;
     justify-content: space-between;
+    color: white;
 }
 
 .usuario-nombre {
@@ -108,11 +111,14 @@ body, html {
     display: flex;
     justify-content: end;
 }
+.sesion{
+    color: #4ead00;
+}
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #282828;
     color: white;
     flex-direction: column;
     justify-content: center;

@@ -21,10 +21,13 @@ header{
     display: flex;
     align-items: center;
     margin-top: 10px;
-    color: #1ED760;
+    color: white;
     position:absolute;
     right: 5%;
     top: 2%;
+}
+.sesion{
+    color: #4ead00;
 }
 
 .usuario-nombre{

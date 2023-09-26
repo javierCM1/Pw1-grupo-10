@@ -42,13 +42,13 @@ h1 {
 
 #fila-uno>div {
     color: white;
-    background-color: #cccccc;
+    background-color: #333;
     font-weight: bold;
 }
 
 li:last-child {
 
-    background-color: #cccccc;
+    background-color: #333;
 
 }
 
