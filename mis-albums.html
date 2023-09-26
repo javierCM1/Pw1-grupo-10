@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/Album.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>SPOTILAM</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <aside class="lateral--izquierdo">
+            <ul class="menu">
+                <li>
+                    <a href="./vista-principal.html">Home</a>
+                </li>
+                <li>
+                    <a href="./buscar.html">Buscar</a>
+                </li>
+                <li>
+                    <a href="./mis-albums.html">Mis Albums</a>
+                </li>
+                <li>
+                    <a href="./favoritas.html" >Favoritas</a>
+                </li>
+            </ul>
+            <div class="album--destacado">
+                <div class="item-imagen">
+                    <h2> Vuelve a escuchar!</h2>
+                    <img src="./imagenes/albumciroylospersasjpg.jpg" alt="portada ciro y los persas" width="200" height="200">
+                </div>
+                <p class="descripcion"> Hemos hecho un vistazo por tu perfil, y notamos que el álbum "27" de Ciro y Los Persas ¡ Es el de mas reproducciones! Sigue disfrutandolo en tu tiempo libre.
+            </div>
+        </aside>
+        <main>
+            <div class="header-info" >
+                <h1>SPOTILAM</h1>
+                <div class="usuario-info">
+                    <span>
+                        <p class="usuario-nombre">Perfil</p>
+                        <a href="">Cerrar sesión</a>
+                    </span>
+                    
+                    <img src="imagenes/usericon.jpg" alt="Usuario">
+                </div>
+            </div>
+
+            <section class="galeria-imagenes">
+                <article>
+                    <img src="./imagenes/albumciroylospersasjpg.jpg" alt="album ciro y los persas">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella1">
+                    <label class="estrella-label" for="estrella1"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/mrbadguy-freddiemercury.jpg" alt="album freedie mercury">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella2">
+                    <label class="estrella-label" for="estrella2"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/dualipa-dualipa.jpg" alt="album dua lipa">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella3">
+                    <label class="estrella-label" for="estrella3"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/unveranosinti-badbunny.jpg" alt="album bad bunny">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella4">
+                    <label class="estrella-label" for="estrella4"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/worldonfire-slash.jpg" alt="album slash">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella5">
+                    <label class="estrella-label" for="estrella5"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/californication-redhotchillpepers.jpg" alt="album red hot chill pepers">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella6">
+                    <label class="estrella-label" for="estrella6"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/ahivamos-gustavocerati.jpg" alt="album gustavo cerati">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella7">
+                    <label class="estrella-label" for="estrella7"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/odisea-ozuna.jpg" alt="album ozuna">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella8">
+                    <label class="estrella-label" for="estrella8"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/oasis-jbalbin.jpg" alt="album j balbin">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella9">
+                    <label class="estrella-label" for="estrella9"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/lachampionsliga-lachampionsliga.jpg" alt="album la champions liga">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella10">
+                    <label class="estrella-label" for="estrella10"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/asieselrockandroll-la25.jpg" alt="album la 25">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella11">
+                    <label class="estrella-label" for="estrella11"></label>
+                </article>
+                <article>
+                    <img src="./imagenes/sueniosliquidos-mana.jpg" alt="album mana">
+                    <input type="checkbox" class="estrella-checkbox" id="estrella12">
+                    <label class="estrella-label" for="estrella12"></label>
+                </article>
+            </section>
+            <section>
+                <article class="reproductor">
+                    <div class="controles">
+                        <button class="boton-play"><i class="fas fa-play"></i></button>
+                        <button class="boton-pausa"><i class="fas fa-pause"></i></button>
+                </article>
+                <article class="barra-progreso">
+                    <div class="progreso"></div>
+                </article>
+            </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>Integrante 1 (nombre, apellido y DNI) Integrante 2 (nombre, apellido y DNI)</p>
+        <p>Integrante 3 (nombre, apellido y DNI) Integrante 4 (nombre, apellido y DNI)</p>
+        <p>Integrante 5 (nombre, apellido y DNI) Integrante 6 (nombre, apellido y DNI)</p>
+    </footer>
+</body>
+
+</html>

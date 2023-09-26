@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale="1">
     <link rel="stylesheet" href="Estilos/Premium.css">
-    <title>Spotylam Premium</title>
+    <title>SPOTILAM Premium</title>
 </head>
 <body>
     <header class="header"> 
@@ -12,7 +12,7 @@
         <div class="usuario-info">
             <span>
                 <p class="usuario-nombre">Nombre Usuario</p>
-                <a href="index.html">Cerrar sesión</a>
+                <a href="index.html" class="cerrar_sesion">Cerrar sesión</a>
             </span>
             <img src="imagenes/usericon.jpg" alt="Usuario">
         </div>
@@ -24,38 +24,48 @@
                     <h2>Solo</h2>
                     <img src="imagenes/Solo.png">
                     <h3>Para el solista</h3>
-                    <ul>
+                    <ul class="Lista_Solo">
                         <li>Un solo usuario, musica ilimitada</li>
                         <li>Accede a toda la musica sin publicidades</li>
                     </ul>
-                    <input type="radio" name="plan" value="1" required>Ars $500/Mes</input>
+                    <div class="radio_solo"> 
+                        <input type="radio"name="plan" id="plan1" value="1" required></input>
+                        <label for="plan1">ARS $500/Mes</label>
+                    </div>
                 </article>
                 <article id="Plan_DUO" class="Plan_DUO">
                     <h2>Duo</h2>
-                    <h3>Porque la musica se comparte</h3>
                     <img src="imagenes/duo.png">
-                    <ul>
+                    <h3>Porque la musica se comparte</h3>
+                    <ul class="Lista_DUO">
                         <li>Dos usuarios, musica ilimitada</li>
                         <li>Accede a toda la musica sin publicidades</li>
                         <li>Playlists de recomendaciones compartidas</li>
                     </ul>
-                    <input type="radio" name="plan" value="2"required>Ars $800/Mes</input>
+                    <div class="radio_duo">
+                        <input type="radio" name="plan"  id="plan2" value="2"required></input>
+                        <label for="plan2">ARS $800/Mes</label>
+                    </div>
                 </article>
                 <article id="Plan_Familiar" class="Plan_Familiar">
                     <h2>Familiar</h2>
                     <img src="imagenes/Familiar.png">
                     <h3>Para vos y tu "Banda"</h3>
-                    <ul>
+                    <ul class="Lista_Familiar">
                         <li>Cuatro usuarios, musica ilimitada</li>
                         <li>Accede a toda la musica sin publicidades</li>
                         <li>Playlists de recomendaciones compartidas</li>
                     </ul>
-                    <input type="radio" name="plan" value="3" required>Ars $1500/Mes</input>
+                    <div class="radio_familiar">
+                        <input type="radio" name="plan" value="3" id="plan3" required></input>
+                        <label for="plan3">ARS $1500/Mes</label>
+                    </div>
+                   
                 </article>
             </section>
             <section id="Botones" class="Botones">
-                    <button class="boton" id="a_Home" class="boton_Atras"><a href="vista-principal.html">Atras</a></button> 
-                    <button type="submit" class="boton" id="a_Pagar"> siguiente</button>
+                    <a href="vista-principal.html" class="boton">Atras</a>
+                    <button type="submit" class="boton" id="a_Pagar"> Siguiente</button>
             </section>
         </form>
     </main>

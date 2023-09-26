@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 .contenedor {
@@ -16,7 +17,7 @@ body {
         "miniatura main main main main main"
         "miniatura reproductor reproductor reproductor reproductor reproductor";
     gap: 1px;
-    height: 95vh;
+    height: 100vh;
 
 
 }
@@ -75,6 +76,7 @@ main {
     grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
     margin: 5%;
     border: 1px solid #cccccc;
+    overflow-y:scroll;
 }
 
 .fila,
@@ -214,4 +216,81 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+
+    /* Personaliza los estilos para esta vista */
+    nav ul {
+        padding: 0;
+    }
+
+    nav li {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+   
+}
+
+@media (min-width: 200px) and (max-width: 599px) {
+    .contenedor {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "miniatura"
+            "reproductor";
+    }
+
+
+    body {
+        font-size: 14px;
+    }
+
+    .miniatura img {
+        max-width: 100%;
+        height: auto;
+    }
+
+  
+    nav ul {
+        padding-inline-start: 0;
+    }
+
+    nav li {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    .icono {
+        justify-content: center;
+        text-align: center;
+    }
+
+ 
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
 }
