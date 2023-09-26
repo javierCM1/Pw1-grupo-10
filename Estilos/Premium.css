@@ -156,11 +156,9 @@ footer {
     margin-top: 1.5%;
 }
 @media screen and (max-width: 600px){
-    header{
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        gap: 10px;
+    header {
+        display: grid;
+        grid-template-columns: 50% 30% 20%;
     }
     .Planes{
         display:flex;
@@ -197,19 +195,9 @@ footer {
         margin-bottom: 20%;
         
     }
-    .usuario-info{
-        position: static;
-        flex-direction: column-reverse;
-        width: 25%;
-        font-size: 100%;
-        text-align: center;
-        align-items: center;
-    }
+ 
     .titulo{
         font-size: 100%;
-    }
-    .usuario-info img{
-        margin: 0;
     }
     .boton{
         width: 50%;
