@@ -111,8 +111,8 @@ input{
 
 }
 .boton {
-    color: white;
     background-color: black;
+
     font-size: 20px;
     width: 200px;
     border: 1px solid;
@@ -122,5 +122,97 @@ input{
     
 
 
+}
+.boton a {
+    color: white;
+   
+    text-decoration: none;
+}
+
+.boton a:hover{
+    color: aqua;
+
+}
+
+
+@media (min-width: 200px) and (max-width: 600px) {
+    .usuario-info {
+        margin: 5px;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .contenedor img {
+        width: 200px;
+        height: 200px;
+    }
+  
+
+    .plan {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .formulario {
+        padding: 5px;
+    }
+
+    .boton {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    
+    .contenedor {
+        margin: 10px;
+    }
+
+    .contenedor img {
+        max-width: 100%;
+    }
+    .datos p{
+        font-size: 13px;
+        margin: 5px;
+    }
+    .datos{
+        width: 150px;
+        
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .usuario-info {
+        margin: 5px;
+    }
+
+    .titulo {
+        font-size: 22px;
+    }
+
+    .contenedor img {
+       width: 200px;
+       height: 150px;
+    }
+
+    .plan {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .formulario {
+        padding: 5px;
+        max-width: 80%;
+    }
+
+    .boton {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
 }
 
