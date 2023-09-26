@@ -1,245 +1,40 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-.contenedor {
+h1,
+#usuario,
+#icono {
     display: flex;
-}
-
-.barra-izquierda {
-    flex: 1;
-    padding: 20px;
-    background-color: #f1f1f1;
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.header-info{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    border: solid #e3e3e3 1px;
-}
-
-.menu li {
-    margin-bottom: 10px;
-    cursor: pointer;
-    padding: 20px;
-    border-bottom: solid #e3e3e3 1px;
-}
-
-.menu .no-border {
-    border: none;
-    margin: 0;
-}
-
-.descripcion {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.descripcion-contenedor{
-    display: flex;
-    flex-direction: column;
-    max-width: min-content;
-}
-
-main {
-    flex: 2;
-    padding: 20px;
+    position: relative;
 }
 
 h1 {
-    margin: 0;
+    left: 5%;
 }
 
-.galeria-imagenes {
-    display: flex;
-    flex-wrap: wrap;
+li:first-child{
+    background-color: #cccccc;
 }
 
-.item-imagen {
-    position: relative;
-    margin: 10px;
-}
 
-.estrella-label {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: 2px solid yellow;
-    clip-path: polygon(
-        50% 0%,
-        61% 35%,
-        98% 35%,
-        68% 57%,
-        79% 91%,
-        50% 70%,
-        21% 91%,
-        32% 57%,
-        2% 35%,
-        39% 35%
-    );
-    cursor: pointer;
-}
-
-.estrella-checkbox {
-    display: none;
-}
-
-.estrella-checkbox:checked + .estrella-label {
-    background-color: yellow;
-}
-
-#estrella1:checked ~ .estrella-label.estrella1,
-#estrella2:checked ~ .estrella-label.estrella2,
-#estrella3:checked ~ .estrella-label.estrella3,
-#estrella4:checked ~ .estrella-label.estrella4,
-#estrella5:checked ~ .estrella-label.estrella5,
-#estrella6:checked ~ .estrella-label.estrella6,
-#estrella7:checked ~ .estrella-label.estrella7,
-#estrella8:checked ~ .estrella-label.estrella8,
-#estrella9:checked ~ .estrella-label.estrella9,
-#estrella10:checked ~ .estrella-label.estrella10,
-#estrella11:checked ~ .estrella-label.estrella11,
-#estrella12:checked ~ .estrella-label.estrella12,
-#estrella13:checked ~ .estrella-label.estrella13,
-#estrella14:checked ~ .estrella-label.estrella14,
-#estrella15:checked ~ .estrella-label.estrella15,
-#estrella15:checked ~ .estrella-label.estrella16 {
-    background-color: yellow;
-}
-
-.usuario-info {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.usuario-nombre{
-    margin-bottom: 0;
-}
-
-.usuario-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
-.galeria-imagenes {
-    margin-top: 20px;
+#galeria-imagenes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-height: 600px;
-    overflow-y: auto; 
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+
 }
 
 
-
-.galeria-imagenes img {
+#galeria-imagenes img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.reproductor {
-    width: 100%;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-right: 5%;
-}
+@media (max-width: 600px) {
 
-.controles {
-    display: flex;
-    gap: 10px;
-}
-
-.boton-play, .boton-pausa {
-    width: 30px;
-    height: 30px;
-    background-color: #333;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 18px;
-}
-
-.barra-progreso {
-    width: 100%;
-    height: 5px;
-    background-color: #ddd;
-    margin-top: 10px;
-}
-
-.progreso {
-    height: 100%;
-    background-color: #333;
-    width: 30%; /* Ajusta el porcentaje según el progreso */
-}
-
-
-@media (max-width: 800px) {
-    .contenedor{
-        display: flex;
-        flex-direction: column-reverse;
+    #galeria-imagenes{
+        display:block;
+        width:100%;
     }
 
-    .barra-izquierda{
-        background-color: white;
-        padding-top: 0;
-        margin-left: 10px;
-    }
-
-    .usuario-info{
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-    }
-    .usuario-info img{
-        margin: 0;
-    }
-    
-    .header-info{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .galeria-imagenes {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
-
-
-
-
-
-
