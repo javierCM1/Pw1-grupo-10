@@ -12,6 +12,10 @@ header{
     padding: 10px;
     position: relative;
     margin-bottom: 30px;
+    width: 100%;
+}
+.titulo{
+    font-size: 100%;
 }
 .usuario-info {
     display: flex;
@@ -19,9 +23,8 @@ header{
     margin-top: 10px;
     color: green;
     position:absolute;
-    right: 15px;
-    top: 5px;
-    font-weight: 700;
+    right: 5%;
+    top: 2%;
 }
 
 .usuario-nombre{
@@ -32,7 +35,8 @@ header{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-left: 10px;
+    margin-left: 5px;
+
 }
 
 footer {
@@ -44,13 +48,18 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
-    font-weight: 700;
+    width: 100%;
+    padding-bottom: 30px;
 }
 .Planes{
     height: 75%;
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    width: auto;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .Plan_Solo img{
     height: 20%;
@@ -60,30 +69,29 @@ footer {
 }
 .Plan_Familiar img{
     height: 20%;
+    margin-left: 40px;
 }
 .Plan_Solo{
     position: relative;
     background-color: #ada7a7;
-    width: 20%;
+    width: 100%;
     border-radius: 5%;
     text-align: center;
     position: relative;
-    margin-right: 10px;
     font-size: 130%;
 }
 .Plan_DUO{
     position: relative;
     background-color: #ada7a7;
-    width: 20%;
+    width: 100%;
     border-radius: 5%;
     text-align: center;
-    margin-right: 10px;
     font-size: 130%;
 }
 .Plan_Familiar{
     position: relative;
     background-color: #ada7a7;
-    width: 20%;
+    width: 100%;
     border-radius: 5%;
     text-align: center;
     font-size: 130%;
@@ -146,4 +154,87 @@ footer {
     font-weight: 700;
     margin-bottom: 1.5%;
     margin-top: 1.5%;
+}
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .Planes{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .Plan_DUO{
+        font-size: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .Plan_Solo{
+        font-size: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .Plan_Familiar{
+        font-size: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .Lista_DUO{
+        margin-bottom: 20%;
+    }
+    .Lista_Familiar{
+        margin-bottom: 20%;
+       
+    }
+    .Lista_Solo{
+        margin-bottom: 20%;
+        
+    }
+    .usuario-info{
+        position: static;
+        flex-direction: column-reverse;
+        width: 25%;
+        font-size: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .titulo{
+        font-size: 100%;
+    }
+    .usuario-info img{
+        margin: 0;
+    }
+    .boton{
+        width: 50%;
+    }
+   
+}
+
+@media screen and (max-width: 1024px) {
+    .Planes{
+       width: 100%;
+       
+    }
+    .Plan_DUO{
+        font-size: 100%;
+        width: 100%;
+       
+    }
+    .Plan_Solo{
+        font-size: 100%;
+        width: 100%;
+        
+    }
+    .Plan_Familiar{
+        font-size: 100%;
+        width: 100%;  
+    }
+   
 }
