@@ -30,6 +30,16 @@ li:first-child{
 }
 
 
+@media (max-width: 1280px) {
+
+    #galeria-imagenes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+    
+}
+
 @media (max-width: 600px) {
 
     #galeria-imagenes{
@@ -40,13 +50,3 @@ li:first-child{
 }
 
 
-
-@media (max-width: 1280px) {
-
-    #galeria-imagenes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: space-between;
-    }
-    
-}
