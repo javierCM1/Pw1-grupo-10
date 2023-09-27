@@ -12,12 +12,23 @@ body, html {
 .content {
     flex: 1; 
 }
-
+.contenido_form{
+    
+    flex:1;
+    width: 100%;
+    margin-top:5%;
+    background-color: #242424;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+}
 .usuario-info {
     display: flex;
-    align-items: center;
+    align-items: right;
     margin: 30px;
     justify-content: end;
+    border: solid red 2px;
     
 }
 
