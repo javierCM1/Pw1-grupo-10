@@ -53,21 +53,52 @@ li:last-child {
 
 }
 
+.bi-play-fill {
+    font-size: 3em;
+}
 
+@media (max-width: 1280px) {
+
+   
+    #tabla {
+        font-size:1em;
+    }
+
+    .bi-play-fill {
+        font-size: 2em;
+    }
+    
+
+    #fila-uno{
+        gap:0px;
+    }
+
+    
+}
 
 
 @media (max-width: 600px) {
 
     h1{
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
-    #galeria-imagenes{
-        display:block;
-        width:100%;
+    #tabla {
+        font-size:0.7em;
+        margin:2%;
     }
 
-    
+    .bi-play-fill {
+        font-size: 1em;
+    }
+ 
+
+    #fila-uno{
+        gap:0px;
+    }
 
 }
+
+
+
     

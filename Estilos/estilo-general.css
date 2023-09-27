@@ -13,20 +13,20 @@ body {
     font-weight: 400;
     min-height: 100vh;
 }
-  
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
-  
+
 p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 input {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 #contenedor {
@@ -52,7 +52,6 @@ input {
     padding: 20px;
     background-color: #282828;
     color: white;
-    max-width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -225,7 +224,8 @@ main {
 
 .progreso {
     height: 100%;
-    background-color: #4ead00;;
+    background-color: #4ead00;
+    ;
     width: 30%;
 }
 
@@ -254,39 +254,98 @@ footer p {
     margin: 1em;
 }
 
+
+
+@media (max-width: 1280px) {
+    .estrella-label{
+        width:1em;
+        height:1em;
+
+    }
+}
+
 @media (max-width: 600px) {
 
     body {
         display: block;
     }
 
-#barra-izquierda{
-    width: 100%;
-    padding:5%;
-}
 
     #contenedor {
         width: 100vw;
         display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 10% 80% 10%;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 15% 65% 10%;
         grid-template-areas:
-        "header header"
-        "lateral main"
-        "reproductor reproductor"
-           
+            "header"
+            "nav"
+            "main"
+            "reproductor"
+
+
     }
+
 
     header {
         display: grid;
         grid-template-columns: 50% 30% 20%;
+        font-size: 0.8em;
     }
 
 
+
+
+    #barra-izquierda {
+        grid-area: nav;
+        background-color: #101010;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding: 2%;
+        max-width: none;
+    }
+
+    ul {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        padding: 0;
+        font-size: 0.8em;
+    }
+
+    #descripcion-contenedor {
+        display: flex;
+        flex-direction: row;
+        max-width: fit-content;
+    }
+
+    
     #imagen-lateral {
-        width:100px;
-        height:100px
+        max-width: min-content;
+        max-height: 23%;
+    }
+
+
+    #descripcion {
+        margin-top: 2.5%;
+        font-size: 0.7em;
+    }
+
+    main {
+        grid-area: main
+    }
+
+    #reproductor {
+        grid-area: reproductor
+    }
+
+    .estrella-label{
+        width:1em;
+        height:1em;
 
     }
-   
+
 }
+
