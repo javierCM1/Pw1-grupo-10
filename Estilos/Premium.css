@@ -2,6 +2,7 @@ body{
     height: 100%;
     margin: 0%;
     background-color: #101010;
+    font-family: 'Montserrat', sans-serif;
 }
 header{
     height: 10%;
@@ -147,6 +148,20 @@ header{
     font-weight: 700;
     margin-bottom: 1.5%;
     margin-top: 1.5%;
+}
+footer {
+    grid-area: footer;
+    height: 100%;
+    text-align: center;
+    padding: 50px;
+    margin-top: 5px;
+    background-color: #282828;
+    color: white;
+    margin-top: 5%;
+}
+
+footer p {
+    margin: 1em;
 }
 @media screen and (max-width: 600px){
     header {
