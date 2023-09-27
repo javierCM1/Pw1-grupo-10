@@ -4,38 +4,50 @@
 }
 
 body, html {
-    background-color: #f0f2f5;
+    background-color: #101010;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    height: 10%;
+    background-color:  #282828;
+    color: white;
+    display: flex;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
 }
 .content {
     flex: 1; 
 }
 .contenido_form{
-    
-    flex:1;
-    width: 100%;
-    margin-top:5%;
+    width: 80%;
     background-color: #242424;
     padding: 1.5em;
     border-radius: 8px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     color: white;
+    justify-self: center;
 }
 .usuario-info {
     display: flex;
-    align-items: right;
-    margin: 30px;
-    justify-content: end;
-    border: solid red 2px;
-    
+    align-items: center;
+    margin-top: 10px;
+    color: white;
+    position:absolute;
+    right: 5%;
+    top: 2%;
 }
 
 .usuario-nombre{
     margin-bottom: 0;
 }
-
+.sesion{
+    color: #4ead00;
+}
 .usuario-info img {
     width: 40px;
     height: 40px;
@@ -131,7 +143,20 @@ input{
     color: aqua;
 
 }
+footer {
+    grid-area: footer;
+    height: 100%;
+    text-align: center;
+    padding: 50px;
+    margin-top: 5px;
+    background-color: #282828;
+    color: white;
+    margin-top: 5%;
+}
 
+footer p {
+    margin: 1em;
+}
 
 @media (min-width: 200px) and (max-width: 600px) {
     .usuario-info {
