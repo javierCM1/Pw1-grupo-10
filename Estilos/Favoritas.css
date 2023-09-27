@@ -36,7 +36,8 @@ h1 {
     justify-content: space-evenly;
     width:100%;
     border-top: 1px solid #cccccc;
-    background-color: white;
+    background-color: #282828;;
+    color:white;
     position:relative;
 }
 
@@ -52,11 +53,8 @@ li:last-child {
 
 }
 
-.estrella{
-    position:absolute;
-    right: 5px;
-    top:5px;
-}
+
+
 
 @media (max-width: 600px) {
 
