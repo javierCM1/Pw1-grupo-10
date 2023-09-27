@@ -5,7 +5,6 @@
 
 body, html {
     background-color: #f0f2f5;
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -33,18 +32,6 @@ body, html {
     margin-left: 10px;
 }
 
-footer {
-    background-color: white;
-    height: 140px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    width: auto;
-}
 .titulo{
     display: flex;
     justify-content: center;

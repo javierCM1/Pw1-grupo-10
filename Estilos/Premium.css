@@ -1,7 +1,6 @@
 body{
     height: 100%;
     margin: 0%;
-    font-family: Arial, sans-serif;
     background-color: #101010;
 }
 header{
@@ -42,18 +41,6 @@ header{
 
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color:  #282828;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding-bottom: 30px;
-}
 .Planes{
     height: 75%;
     display: flex;
