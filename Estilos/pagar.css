@@ -108,6 +108,7 @@ header{
 }
 input{
     width: 200px;
+    height: 25px;
     border: 1px solid black;
 
 }
@@ -161,7 +162,7 @@ footer p {
     margin: 1em;
 }
 
-@media (min-width: 200px) and (max-width: 600px) {
+@media (min-width: 200px) and (max-width: 800px) {
     .usuario-info {
         margin: 5px;
     }
@@ -203,16 +204,20 @@ footer p {
         max-width: 100%;
     }
     .datos p{
-        font-size: 13px;
+        font-size: 12px;
         margin: 5px;
     }
     .datos{
         width: 150px;
         
     }
+    .datos input{
+        width: 100px;
+        height: 20px;
+    }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 800px) and (max-width: 1200px) {
     .usuario-info {
         margin: 5px;
     }
@@ -227,9 +232,10 @@ footer p {
     }
 
     .plan {
-        font-size: 16px;
+        font-size: 14px;
         margin: 10px 0;
     }
+
 
     .formulario {
         padding: 5px;
@@ -239,6 +245,10 @@ footer p {
     .boton {
         font-size: 16px;
         padding: 8px 16px;
+    }
+    .datos input{
+        width: 200px;
+        height: 25px;
     }
 }
 
