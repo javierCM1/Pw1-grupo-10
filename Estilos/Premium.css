@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+=======
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #101010;
+>>>>>>> Stashed changes
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
 }
 body{
     height: 100vh;
@@ -20,7 +28,16 @@ body{
     grid-template-areas:"titulo usuario-info";
     height: 100%;
     color: white;
+<<<<<<< Updated upstream
     background-color:#282828;
+=======
+    display: flex;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+   
+>>>>>>> Stashed changes
 }
 .titulo{
     grid-area: titulo;
@@ -52,15 +69,71 @@ body{
     align-content: center;
     justify-content: space-around;
     color: white;
+<<<<<<< Updated upstream
 }
 .plan{
+=======
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+    position: relative;
+    font-size: 130%;
+    min-width: 350px;
+ 
+}
+.Plan_DUO{
+    position: relative;
+    background-color: #242424;
+    color: white;
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+    font-size: 130%;
+    min-width: 350px;
+  
+}
+.Plan_Familiar{
+    position: relative;
+    background-color: #242424;
+    color: white;
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+    font-size: 130%;
+    min-width: 350px;
+    
+}
+.Botones{
+>>>>>>> Stashed changes
     display: flex;
     flex-direction: column;
     justify-content: center;
+<<<<<<< Updated upstream
     text-align: center;
     padding: 5%;
     background-color: #242424;
     border-radius: 5%;
+=======
+    margin-bottom: 15px;
+}
+.Lista_Solo{
+    display: block;
+    height: 9%;
+    text-align: left;
+
+}
+.Lista_DUO{
+    display: block;
+    height: 29%;
+    text-align: left;
+ 
+}
+.Lista_Familiar{
+    display: block;
+    height: 20%;
+    text-align: left;
+>>>>>>> Stashed changes
+    
     
 }
 .plan img{
@@ -102,7 +175,12 @@ body{
     height: fit-content;
     background-color: #282828;
     color: white;
+<<<<<<< Updated upstream
     padding: 4%;
+=======
+    margin-top: 5%;
+    min-width: 559px;
+>>>>>>> Stashed changes
 }
 @media screen and (max-width:600px) {
     .body{
