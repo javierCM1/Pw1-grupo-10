@@ -1,236 +1,120 @@
-body{
-    height: 100%;
-    margin: 0%;
-    background-color: #101010;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-header{
-    height: 10%;
-    background-color:  #282828;
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    gap: 3em;
+    background-color: #101010;
+}
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-areas:"titulo usuario-info";
+    height: 100%;
     color: white;
-    display: flex;
-    padding: 10px;
-    position: relative;
-    margin-bottom: 30px;
-    width: 100%;
+    background-color:#282828;
 }
 .titulo{
-    font-size: 100%;
-}
-.usuario-info {
+    grid-area: titulo;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    color: white;
-    position:absolute;
-    right: 5%;
-    top: 2%;
+}
+.usuario-info{
+    grid-area: usuario-info;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2%;
+
+}
+.usuario-info img{
+    height: 3em;
+    border-radius: 50%;
+    margin-left: 2%;
 }
 .sesion{
-    color: #4ead00;
+    color:#4ead00;
 }
-
-.usuario-nombre{
-    margin-bottom: 0;
+.main{
+    grid-area: main;
 }
-
-.usuario-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 5px;
-
-}
-
-.Planes{
-    height: 75%;
+.planes{
     display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    width: auto;
-    gap: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.Plan_Solo img{
-    height: 20%;
-}
-.Plan_DUO img{
-    height: 20%;
-}
-.Plan_Familiar img{
-    height: 20%;
-    margin-left: 40px;
-}
-.Plan_Solo{
-    position: relative;
-    background-color: #242424;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
     color: white;
-    width: 100%;
-    border-radius: 5%;
-    text-align: center;
-    position: relative;
-    font-size: 130%;
 }
-.Plan_DUO{
-    position: relative;
-    background-color: #242424;
-    color: white;
-    width: 100%;
-    border-radius: 5%;
-    text-align: center;
-    font-size: 130%;
-}
-.Plan_Familiar{
-    position: relative;
-    background-color: #242424;
-    color: white;
-    width: 100%;
-    border-radius: 5%;
-    text-align: center;
-    font-size: 130%;
-}
-.Botones{
+.plan{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 15px;
-}
-.Lista_Solo{
-    display: block;
-    height: 9%;
-    text-align: left;
-}
-.Lista_DUO{
-    display: block;
-    height: 29%;
-    text-align: left;
-}
-.Lista_Familiar{
-    display: block;
-    height: 20%;
-    text-align: left;
+    text-align: center;
+    padding: 5%;
+    background-color: #242424;
+    border-radius: 5%;
     
+}
+.plan img{
+    height: 20%;
+}
+.Lista{
+    text-align: left;
 }
 .radio_solo{
     display: flex;
-    position: absolute;
-    bottom: 5%;
-    left: 33%;
     justify-content: center;
+    align-items: flex-end;
+}
 
-}
-.radio_familiar{
+.botones{
     display: flex;
-    position: absolute;
-    bottom: 5%;
-    left: 33%;
-    justify-content: center;
-}
-.radio_duo{
-    display: flex;
-    position: absolute;
-    bottom: 5%;
-    left: 33%;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
 }
 .boton{
-    height: 50px;
-    width: 20%;
-    font-size: 1rem;
-    background-color: white;
-    color: black;
-    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50em;
+    height: 4em;
     text-align: center;
-    line-height: 50px;
-    text-decoration: none; 
-    margin-left: 5px;
-    margin-right: 5px;
+    text-decoration: none;
+    background-color: #242424;
+    color: white;
+    border-radius: 5%;
     font-weight: 700;
-    margin-bottom: 1.5%;
-    margin-top: 1.5%;
 }
-footer {
+
+.footer{
     grid-area: footer;
-    height: 100%;
     text-align: center;
-    padding: 50px;
-    margin-top: 5px;
+    height: fit-content;
     background-color: #282828;
     color: white;
-    margin-top: 5%;
+    padding: 4%;
 }
-
-footer p {
-    margin: 1em;
-}
-@media screen and (max-width: 600px){
-    header {
-        display: grid;
-        grid-template-columns: 50% 30% 20%;
+@media screen and (max-width:600px) {
+    .body{
+        font-size: 10%;
     }
-    .Planes{
-        display:flex;
+    .planes{
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        margin-right: 5px;
-        margin-left: 5px;
-    }
-    .Plan_DUO{
-        font-size: 100%;
-        width: 100%;
-        height: auto;
-    }
-    .Plan_Solo{
-        font-size: 100%;
-        width: 100%;
-        height: auto;
-    }
-    .Plan_Familiar{
-        font-size: 100%;
-        width: 100%;
-        height: auto;
-    }
-    .Lista_DUO{
-        margin-bottom: 20%;
-    }
-    .Lista_Familiar{
-        margin-bottom: 20%;
-       
-    }
-    .Lista_Solo{
-        margin-bottom: 20%;
-        
-    }
- 
-    .titulo{
-        font-size: 100%;
+        gap: 1em;
     }
     .boton{
-        width: 50%;
+        width: 15em;
     }
-   
-}
 
-@media screen and (max-width: 1024px) {
-    .Planes{
-       width: 100%;
-       
-    }
-    .Plan_DUO{
-        font-size: 100%;
-        width: 100%;
-       
-    }
-    .Plan_Solo{
-        font-size: 100%;
-        width: 100%;
-        
-    }
-    .Plan_Familiar{
-        font-size: 100%;
-        width: 100%;  
-    }
-   
+    
 }
