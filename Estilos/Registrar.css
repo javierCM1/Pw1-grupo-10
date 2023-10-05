@@ -18,11 +18,13 @@ body, html {
     align-items: center;
     padding: 20px;
     margin-bottom: 100px;
+    min-width: 450px;
 }
 
 .formulario {
     width: 100%;
     max-width: 550px;
+    min-width: 360px;
     background-color: #242424;
     color: white;
     padding: 20px;
