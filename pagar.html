@@ -32,25 +32,25 @@
             
         </article>
         <article>
-            <form action="" class="formulario">
+            <form action="" class="formulario" onsubmit="return validarFormulario(event)">
                 <div class="columnas-datos">
                     <div class="datos">
-                        <p>Tarjeta</p>
-                        <input type="number" class="" placeholder="numero de la tarjeta">
+                        <label for="tarjeta">Tarjeta</label>
+                        <input type="number" class="" placeholder="numero de la tarjeta" id="tarjeta">
                     </div>
                     <div class="datos">
-                        <p>CVC</p>
-                        <input type="number" class="" placeholder="CVC">
+                        <label for="cvc">CVC</label>
+                        <input type="number" class="" placeholder="CVC" id="cvc">
                      </div>
                 </div>
                 <div class="columnas-datos">
                     <div class="datos">
-                    <p>VTO</p>
-                    <input type="date" class="" >
+                        <label for="vto">VTO</label>
+                    <input type="date" class="" id="vto">
                     </div>
                     <div class="datos">
-                    <p>Nombre y Apellido</p>
-                    <input type="text" class="" placeholder="Nombre y apellido">
+                        <label for="nombre">Nombre</label>
+                    <input type="text" class="" placeholder="Nombre y apellido" id="nombre">
                     </div>
                 </div>
                 <div class="botones">
@@ -64,6 +64,7 @@
                         <a href="vista-principal.html">Pagar</a>    
                     </button>
                 </div>
+                <div class="error" id="errores"></div>
 
             </form>
         </article>
@@ -74,5 +75,6 @@
         <p>Integrante 3 (Florencia, Carvajal y 41.076.700)  Integrante 4 (Damian, de Sousa, 42.597.257)</p>
         <p>Integrante 5 (Franco, Ignacio y 44729038)</p>
     </footer>
+    <script src="js/pagar.js"></script>
 </body>
 </html>
