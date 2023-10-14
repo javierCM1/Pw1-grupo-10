@@ -10,13 +10,7 @@
 <body class="content">
     <header class="header"> 
         <div calss="tiulo"><h1>SPOTILAM</h1></div>
-        <div class="usuario-info">
-            <span>
-                <p class="usuario-nombre">Nombre Usuario</p>
-                <a href="index.html" class="sesion">Cerrar sesión</a>
-            </span>
-            <img src="imagenes/usericon.jpg" alt="Usuario">
-        </div>
+        
     </header>
     <main>
         <section class="contenido_form">
@@ -59,15 +53,24 @@
                         <a href="vista-principal.html">Cancelar</a>
                         
                     </button>
-                    <button class="boton" href>
-                       
-                        <a href="vista-principal.html">Pagar</a>    
-                    </button>
-                </div>
-                <div class="error" id="errores"></div>
+                    <div class="aceptar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </article>
+                    <div class="error" id="errores"></div>
+                    <div class="modal" id="ventanaModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            
+                            <h2>Se ha suscribido con exito!</h2>
+                            <p>Felicitaciones ya es parte de spotify premium</p>
+                            <a href="index.html"><button>Aceptar</button></a>
+                        </div>
+                    </div>
 
-            </form>
-        </article>
+                
+
     </section>
     </main>
     <footer>
