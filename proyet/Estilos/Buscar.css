@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        "nav header header header header header"
+        "nav main main main main main"
+        "nav main main main main main"
+        "nav main main main main main"
+        "miniatura main main main main main"
+        "miniatura main main main main main"
+        "miniatura main main main main main"
+        "miniatura reproductor reproductor reproductor reproductor reproductor";
+    gap: 1px;
+    height: 95vh;
+
+}
+
+.buscar, #enviar,
+.usuario,
+.icono {
+    display: flex;
+    position: relative;
+}
+
+.buscar {
+    left: 5%;
+    height: 40px;
+}
+
+#barra {
+    border-radius: 40px 0 0 40px;
+    width:40%;
+    padding-left: 20px;
+}
+
+/* #enviar{
+    width:5%;
+    border-radius: 0 40px 40px 0;
+    
+} */
+
+button[type="submit"] {
+
+    width:5%;
+    border-radius: 0 40px 40px 0;
+    background: url(/imagenes/botonbuscar.png) no-repeat center;
+    background-size: 20px;
+
+}
+
+.usuario {
+    text-align: right;
+    flex-direction: column;
+
+}
+
+.icono {
+    justify-content: center
+}
+
+.iconoimg {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.sesion {
+    color: #6964ad;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    align-items: center;
+}
+
+
+main {
+    grid-area: main;
+    display: grid;
+    
+}
+
+.portadas{
+    display: flex;
+   flex-wrap: wrap;
+   gap:5px;
+    justify-content: space-between;
+    margin:1% 0 0 5%;
+    overflow-y: scroll;
+ 
+}
+
+img {
+    width:300px;
+}
+.cover {
+    position: relative;
+
+}
+.estrella{
+    position:absolute;
+    top:2%;
+    right:2%;
+
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+ul {
+    padding-inline-start: 0%;
+    list-style-type: none;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+}
+
+li {
+    display: flex;
+    padding: 10%;
+    border-bottom: 1px solid #cccccc;
+
+}
+
+li>a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+li:nth-child(2) {
+    border-bottom: none;
+    background-color: #cccccc;
+
+}
+
+li:hover {
+    background-color: #dddddd;
+}
+
+.miniatura {
+    grid-area: miniatura;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cccccc;
+    padding-bottom: 5%;
+    border-radius: 5px;
+    position:relative;
+}
+
+.titulo {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.artista {
+    font-size: medium;
+}
+
+.album {
+    color: #757575;
+}
+
+.imgmini{
+    width: 100%;
+
+}
+
+.reproductor {
+    grid-area: reproductor;
+    background-color: #cccccc;
+    margin-left: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+progress {
+    width: 80%;
+    accent-color: #6964ad;
+}
+
+
+footer {
+    grid-area: footer;
+    border: 1px solid black;
+    margin-top: 5%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
