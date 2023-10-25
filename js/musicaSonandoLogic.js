@@ -1,15 +1,23 @@
-// musicaSonandoLogic.js
+
+
 function mostrarDatosArray() {
-    // Obtiene los datos del array almacenados en el almacenamiento local
+    
     const datosArray = JSON.parse(localStorage.getItem('datosArray'));
 
     // Verifica si los datosArray existen y no son nulos
     if (datosArray) {
-        // Ahora puedes utilizar los datosArray para mostrar la información en la página 'musica-sonando.html'
-        // Por ejemplo, puedes generar una lista de canciones en la página.
         const listaCanciones = document.getElementById('lista-canciones');
+        const descripcionElement = document.getElementById('descripcion');
+        const imagenLateralElement = document.getElementById('imagen-lateral')
+
+
         datosArray.forEach((cancion) => {   
-            //Creo los div para cada una de las celdas que voy a usar dentro del grid
+            
+
+          /*----------------------------------------------------------
+          ----------Creacion de div para el grid --------------------------------
+          -----------------------------------------------------------*/
+            
             const elementoItem = document.createElement('div');
             const elementoCancion = document.createElement('div');
             const elementoAlbum = document.createElement('div');
@@ -18,8 +26,41 @@ function mostrarDatosArray() {
 
             //Agrego la clase de tema para el nombre del tema
             elementoCancion.classList.add('tema');
-            //Clase de la extrella
-            elementoItem.classList.add('bi', 'bi-play-fill');
+            //Clase del boton play
+            const elementoI = document.createElement('i');
+            elementoI.classList.add('bi', 'bi-play-fill', 'playing');
+            /*
+                        elemento que al clickar cambie
+
+                                                    */
+                                    
+                elementoI.addEventListener('click', () => {
+                    if(elementoI.classList.contains('bi-play-fill')) {   
+
+                    const playIcons = document.querySelectorAll('.playing');
+
+                        playIcons.forEach((icon) => {
+                            
+                            icon.classList.remove('bi-pause-fill');
+                            icon.classList.add('bi-play-fill')
+                            icon.classList.remove('playing');
+                            
+                        });
+
+                    elementoI.classList.remove('bi-play-fill');
+                    elementoI.classList.add('bi-pause-fill');
+                    elementoI.classList.add('playing');
+
+                }else {
+                    elementoI.classList.remove('bi-pause-fill');
+                    elementoI.classList.add('bi-play-fill');
+                    elementoI.classList.remove('playing')
+                }
+                
+            });
+
+            //Se lo agrego al div 
+            elementoItem.appendChild(elementoI);
             elementoCancion.textContent = ` ${cancion.nombre}`;
             elementoAlbum.textContent = `${cancion.album}`;
             
@@ -62,7 +103,7 @@ function mostrarDatosArray() {
 
             
 
-
+            //Agrego los elementos
             listaCanciones.appendChild(elementoItem);
             listaCanciones.appendChild(elementoCancion);
             listaCanciones.appendChild(elementoAlbum);
@@ -73,4 +114,7 @@ function mostrarDatosArray() {
 }
 
 
+
 window.addEventListener('load', mostrarDatosArray);
+
+
