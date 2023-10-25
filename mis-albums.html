@@ -56,22 +56,24 @@
 
             <section id="galeria-imagenes">
                 <article class="item-imagen">
-                    <a href="musica-sonando.html"><img src="imagenes/albumcover1.jpg" alt="Imagen 1"></a>
+                    <a href="musica-sonando.html" onclick="redireccionarYMostrarDatos('X')">
+                        <img src="imagenes/albumcover1.jpg" alt="Imagen 1" ></a>
                     <input type="checkbox" class="estrella-checkbox" id="estrella1">
                     <label class="estrella-label" for="estrella1"></label>
                 </article>
                 <article class="item-imagen">
-                    <a href="musica-sonando.html"><img src="imagenes/albumcover2.jpg" alt="Imagen 1"></a> 
+                    <a href="musica-sonando.html" onclick="redireccionarYMostrarDatos('KATY')">
+                        <img src="imagenes/albumcover2.jpg" alt="Imagen 1" ></a> 
                     <input type="checkbox" class="estrella-checkbox" id="estrella2">
                     <label class="estrella-label" for="estrella2"></label>
                 </article>
                 <article class="item-imagen">
-                    <a href="musica-sonando.html"><img src="imagenes/albumcover3.jpg" alt="Imagen 1"></a> 
+                    <a href="musica-sonando.html"><img src="imagenes/albumcover3.jpg" alt="Imagen 1"  id="3"></a> 
                     <input type="checkbox" class="estrella-checkbox" id="estrella3">
                     <label class="estrella-label" for="estrella3"></label>
                 </article>
                 <article class="item-imagen">
-                    <a href="musica-sonando.html"><img src="imagenes/albumcover4.jpg" alt="Imagen 1"></a>
+                    <a href="musica-sonando.html"><img src="imagenes/albumcover4.jpg" alt="Imagen 1"  data-indice="3" class="imagen"></a>
                     <input type="checkbox" class="estrella-checkbox" id="estrella4">
                     <label class="estrella-label" for="estrella4"></label>
                 </article>
@@ -153,7 +155,8 @@
         <p>Integrante 5 (Franco, Ignacio y 44729038)</p>
     </footer>
 
-
+    <script src="js/musicaSonando.js"></script>
+    <script src="js/musicaSonandoLogic.js"></script>
 
 </body>
 
