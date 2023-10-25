@@ -13,26 +13,26 @@ function validarFormulario(event) {
     if(tarjeta.value == ''){
        
      error = true;
-    msjError += "<p>El numero de la tarjeta no puede estar vacio</p>"
+    msjError += "<p>-El numero de la tarjeta no puede estar vacio</p>"
         
 }
 if(numerosDeTarjetaMax != tarjeta.value.length) {
     error = true;
-    msjError += "<p>El numero de la tarjeta no puede ser mas de 16</p>"
+    msjError += "<p>-El numero de la tarjeta no puede ser mas de 16</p>"
 }
 if(cvc.value == ""){
     error = true;
-    msjError += "<p>El cvc no fue ingresado correctamente</p>"
+    msjError += "<p>-El cvc no fue ingresado correctamente</p>"
 }
 
     if(cvc.value.length != 3 ){
         error = true;
-        msjError += "<p>El cvc tiene que ser 3 numeros </p>"
+        msjError += "<p>-El cvc tiene que ser 3 numeros </p>"
         console.log(cvc.value.lenght)
     }
         if(cvc.value == "999" || cvc.value == "000"){
             error = true;
-            msjError += "<p>El cvc no fue ingresado correctamente</p>"
+            msjError += "<p>-El cvc no fue ingresado correctamente</p>"
         }
         
     
