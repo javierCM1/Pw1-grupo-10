@@ -14,10 +14,11 @@ h1 {
 
 #tabla {
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 0.5fr 2fr;
     margin: 5%;
     border: 1px solid #cccccc;
     overflow-y:scroll;
+    height: 50vh;
 }
 
 .fila,
@@ -53,9 +54,12 @@ li:last-child {
 
 }
 
-.bi-play-fill {
+.bi-play-fill,
+.bi-pause-fill {
     font-size: 3em;
 }
+
+
 
 @media (max-width: 1280px) {
 
@@ -64,7 +68,8 @@ li:last-child {
         font-size:1em;
     }
 
-    .bi-play-fill {
+    .bi-play-fill,
+    .bi-pause-fill {
         font-size: 2em;
     }
     
@@ -85,10 +90,11 @@ li:last-child {
 
     #tabla {
         font-size:0.7em;
-        margin:2%;
+        margin: 2%;
     }
 
-    .bi-play-fill {
+    .bi-play-fill,
+    .bi-pause-fill {
         font-size: 1em;
     }
  
