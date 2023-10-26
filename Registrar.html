@@ -21,24 +21,24 @@
             <div class="form_caja">
                 <div class="campo">
                     <p class="titulo">Usuario</p>
-                    <input type="text" class="input" required>
+                    <input type="text" class="input user" name="user" required>
                 </div>
                 <div class="campo">
                     <p class="titulo">Contraseña</p>
-                    <input type="password" class="input" required>
+                    <input type="password" class="input password" name="password" required>
                 </div>
                 <div class="campo">
                     <p class="titulo">Repetir contraseña</p>
-                    <input type="password" class="input" required>
+                    <input type="password" class="input password-repetido" name="password-repetido" required>
                 </div>
                 <div class="campo2">
                     <div class="campo">
                         <p class="titulo">Fecha de nacimiento</p>
-                        <input type="date" class="input" required>
+                        <input type="date" class="input date" name="date" required>
                     </div>
                     <div class="campo">
                         <p class="titulo">e-mail</p>
-                        <input type="email" class="input" required>
+                        <input type="email" class="input email" name="email" required>
                     </div>
                     <div class="premium">
                         <a href="Premium.html" class="a">Premium</a>
@@ -48,8 +48,15 @@
             </div>
             <div class="botonContain">
                 <a href="vista-principal.html" class="boton">Volver al home</a>
-                <button type="submit" class="boton">Guardar</button>
+                <button type="submit" class="boton" name="save">Guardar</button>
             </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close-button" onclick="cerrarModal()">&times;</span>
+                  <p class="mensaje">Datos guardados correctamente</p>
+                  <button class="botonInico" onclick="naverga()" >Ir al inicio</button>
+                </div>
+              </div>
         </form>
     </div>
     <footer>
@@ -57,5 +64,6 @@
         <p>Integrante 3 (Florencia, Carvajal y 41.076.700)  Integrante 4 (Damian, de Sousa, 42.597.257)</p>
         <p>Integrante 5 (Franco, Ignacio y 44729038)</p>
     </footer>
+    <script src="js/registrar.js"></script>
 </body>
 </html>
