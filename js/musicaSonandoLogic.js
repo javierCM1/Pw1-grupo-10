@@ -28,7 +28,15 @@ function mostrarDatosArray() {
             elementoI.classList.add('bi', 'bi-play-fill', 'playing');
            
 
-               cambiarAlPlay(elementoI);
+               cambiarAlPlay(elementoI, cancion);
+               const imagen = cancion.imagen;
+               const descripcion = `Elige una cancion del album:  ${cancion.album} `
+       
+               const imagenLateral  = document.getElementById('imagen-lateral');
+               const descripcionContenedor = document.getElementById('descripcion');
+       
+               imagenLateral.src = imagen;
+               descripcionContenedor.textContent = descripcion;
 
             //Se lo agrego al div 
             elementoItem.appendChild(elementoI);
@@ -95,7 +103,7 @@ window.addEventListener('load', mostrarDatosArray);
                         elemento que al clickar cambie
 
                                                     */
-function cambiarAlPlay (elementoI) {
+function cambiarAlPlay (elementoI, cancion) {
     elementoI.addEventListener('click', () => {
         if(elementoI.classList.contains('bi-play-fill')) {   
 
@@ -113,6 +121,14 @@ function cambiarAlPlay (elementoI) {
         elementoI.classList.add('bi-pause-fill');
         elementoI.classList.add('playing');
 
+        const imagen = cancion.imagen;
+        const descripcion = `Estas escuchando ${cancion.nombre} del album ${cancion.album} `
+
+        const imagenLateral  = document.getElementById('imagen-lateral');
+        const descripcionContenedor = document.getElementById('descripcion');
+
+        imagenLateral.src = imagen;
+        descripcionContenedor.textContent = descripcion;
     }else {
         elementoI.classList.remove('bi-pause-fill');
         elementoI.classList.add('bi-play-fill');
@@ -122,13 +138,5 @@ function cambiarAlPlay (elementoI) {
 });
 }
 
-function crearExtrella () {
-    //creo los elementos para que la extrella pueda ser un input
-    const divEstrella = document.createElement('div');
-    divEstrella.classList.add('estrella');
-    const inputEstrella = document.createElement('input');
-    inputEstrella.type = 'checkbox';
-    //agrego la clase
-    inputEstrella.classList.add('estrella-checkbox');
-}
+
 

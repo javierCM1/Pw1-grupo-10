@@ -18,7 +18,7 @@ function validarFormulario(event) {
 }
 if(numerosDeTarjetaMax != tarjeta.value.length) {
     error = true;
-    msjError += "<p>-El numero de la tarjeta no puede ser mas de 16</p>"
+    msjError += "<p>-El numero de la tarjeta son 16 numeros </p>"
 }
 if(cvc.value == ""){
     error = true;
@@ -64,4 +64,26 @@ if(cvc.value == ""){
     }
 
 
+}
+
+function leerLaPost(){
+        const titulo = document.getElementById('titulo');
+        const info = document.getElementById('info');
+        const url = window.location.href;
+        const array = url.split('?')
+        var plan = array[array.length -1];
+        console.log(plan);
+        if(plan == "plan=2"){
+            titulo.innerHTML = "Elegiste el plan duo";
+            info.innerHTML = "Este es el plan duo, cuenta con la posibilidad de tener Spotilam premium en dos cuentas, los beneficios son: musica sin anuncios, descargar musica y muchas cosas mas!"
+        }else if(plan == "plan=1"){
+            titulo.innerHTML = "Elegiste el plan individual";
+            info.innerHTML =  "Este es el plan individual, cuenta con la posibilidad de acceder a los beneficos Spotilam premium en una cuenta. Los beneficios son: musica sin anuncios, descargar musica y muchas cosas mas!"
+        }else if(plan == "plan=3"){
+            titulo.innerHTML = "Elegiste el plan familiar"
+            info.innerHTML =  "Este es el plan familiar, cuenta con la posibilidad de acceder a los beneficos Spotilam premium en hasta cuatro cuentas. Los beneficios son: musica sin anuncios, descargar musica y muchas cosas mas!"
+        }
+
+        
+        
 }
