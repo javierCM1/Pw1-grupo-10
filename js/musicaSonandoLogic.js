@@ -7,10 +7,7 @@ function mostrarDatosArray() {
     // Verifica si los datosArray existen y no son nulos
     if (datosArray) {
         const listaCanciones = document.getElementById('lista-canciones');
-        const descripcionElement = document.getElementById('descripcion');
-        const imagenLateralElement = document.getElementById('imagen-lateral')
-
-
+        
         datosArray.forEach((cancion) => {   
             
 
@@ -29,35 +26,17 @@ function mostrarDatosArray() {
             //Clase del boton play
             const elementoI = document.createElement('i');
             elementoI.classList.add('bi', 'bi-play-fill', 'playing');
-            /*
-                        elemento que al clickar cambie
+           
 
-                                                    */
-                                    
-                elementoI.addEventListener('click', () => {
-                    if(elementoI.classList.contains('bi-play-fill')) {   
-
-                    const playIcons = document.querySelectorAll('.playing');
-
-                        playIcons.forEach((icon) => {
-                            
-                            icon.classList.remove('bi-pause-fill');
-                            icon.classList.add('bi-play-fill')
-                            icon.classList.remove('playing');
-                            
-                        });
-
-                    elementoI.classList.remove('bi-play-fill');
-                    elementoI.classList.add('bi-pause-fill');
-                    elementoI.classList.add('playing');
-
-                }else {
-                    elementoI.classList.remove('bi-pause-fill');
-                    elementoI.classList.add('bi-play-fill');
-                    elementoI.classList.remove('playing')
-                }
-                
-            });
+               cambiarAlPlay(elementoI, cancion);
+               const imagen = cancion.imagen;
+               const descripcion = `Elige una cancion del album:  ${cancion.album} `
+       
+               const imagenLateral  = document.getElementById('imagen-lateral');
+               const descripcionContenedor = document.getElementById('descripcion');
+       
+               imagenLateral.src = imagen;
+               descripcionContenedor.textContent = descripcion;
 
             //Se lo agrego al div 
             elementoItem.appendChild(elementoI);
@@ -98,10 +77,12 @@ function mostrarDatosArray() {
             divEstrellaAlbum.appendChild(labelEstrellaAlbum);
             elementoAlbum.appendChild(divEstrellaAlbum);
 
+            //----------------------------------------------------------------------
+
+
             elementoVistas.textContent = `${cancion.vistas}`;
             elementoDuracion.textContent = `${cancion.duracion}`;
 
-            
 
             //Agrego los elementos
             listaCanciones.appendChild(elementoItem);
@@ -116,5 +97,46 @@ function mostrarDatosArray() {
 
 
 window.addEventListener('load', mostrarDatosArray);
+
+
+ /*
+                        elemento que al clickar cambie
+
+                                                    */
+function cambiarAlPlay (elementoI, cancion) {
+    elementoI.addEventListener('click', () => {
+        if(elementoI.classList.contains('bi-play-fill')) {   
+
+        const playIcons = document.querySelectorAll('.playing');
+
+            playIcons.forEach((icon) => {
+                
+                icon.classList.remove('bi-pause-fill');
+                icon.classList.add('bi-play-fill')
+                icon.classList.remove('playing');
+                
+            });
+
+        elementoI.classList.remove('bi-play-fill');
+        elementoI.classList.add('bi-pause-fill');
+        elementoI.classList.add('playing');
+
+        const imagen = cancion.imagen;
+        const descripcion = `Estas escuchando ${cancion.nombre} del album ${cancion.album} `
+
+        const imagenLateral  = document.getElementById('imagen-lateral');
+        const descripcionContenedor = document.getElementById('descripcion');
+
+        imagenLateral.src = imagen;
+        descripcionContenedor.textContent = descripcion;
+    }else {
+        elementoI.classList.remove('bi-pause-fill');
+        elementoI.classList.add('bi-play-fill');
+        elementoI.classList.remove('playing')
+    }
+    
+});
+}
+
 
 
