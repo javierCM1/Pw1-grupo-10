@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="Estilos/estilo-general.css">
     <link rel="stylesheet" href="Estilos/login.css">
     <title>SPOTILAM</title>
 </head>
+
 <body>
     <main class="content">
-        <form action="vista-principal.html" class="formularios">
+        <form action="vista-principal.html" class="formularios" id="form-inicio_sesion">
             <label class="titulo">Usuario</label>
-            <input class="inp" type="text" required>
+            <input class="inp" id="usuario" type="text" required>
             <label class="titulo">Contraseña</label>
-            <input class="inp" type="password" required>
+            <input class="inp" id="password" type="password" required>
             <input type="submit" value="Iniciar sesión" class="boton">
             <div class="a">
                 <a href="Registrar.html"> Registrarme</a>
@@ -22,9 +25,13 @@
         </form>
     </main>
     <footer>
-           <p>Integrante 1 (Luciana, Romero y 43.719.777)  Integrante 2 (Javier, Cabrera y 45.0072.92)</p>
-           <p>Integrante 3 (Florencia, Carvajal y 41.076.700)  Integrante 4 (Damian, de Sousa, 42.597.257)</p>
-           <p>Integrante 5 (Franco, Ignacio y 44729038)</p>
+        <p>Integrante 1 (Luciana, Romero y 43.719.777) Integrante 2 (Javier, Cabrera y 45.0072.92)</p>
+        <p>Integrante 3 (Florencia, Carvajal y 41.076.700) Integrante 4 (Damian, de Sousa, 42.597.257)</p>
+        <p>Integrante 5 (Franco, Ignacio y 44729038)</p>
     </footer>
+    <script src="js/registrar.js"></script>
+    <script src="js/iniciar sesion.js"></script>
+
 </body>
+
 </html>
