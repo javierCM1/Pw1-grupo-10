@@ -17,7 +17,7 @@ formularioInicioSesion.addEventListener('submit', (event) => {
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
             logueado= true;
-            alert("usuario encontrado")
+            window.location.href = 'vista-principal.html';
             break; 
         }else{
             alert("usuario no encontrado")

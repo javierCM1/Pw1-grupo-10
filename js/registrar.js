@@ -46,7 +46,7 @@ formulario.addEventListener('submit', (event) => {
         const userJSON = JSON.stringify(arrayUsuarios);
         localStorage.setItem('users', userJSON);
 
-        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('mensaje-exito').style.display = 'flex';
 
     } catch (error) {
         alert(error.message);
@@ -54,8 +54,8 @@ formulario.addEventListener('submit', (event) => {
 
 });
 
-function cerrarModal() {
-    document.getElementById('modal').style.display = 'none';
+function cerrarMensajeExito() {
+    document.getElementById('mensaje-exito').style.display = 'none';
 }
 
 function modificarContraseña(password){
@@ -72,11 +72,45 @@ function modificarContraseña(password){
 const BOTON = document.getElementById('botonInico');
 BOTON.addEventListener('click', (Event) => {
     Event.preventDefault();
-    window.location.href = 'vista-principal.html';
+    window.location.href = 'index.html';
 });
 
+function eliminarUsuario() {
+    const usuarioInput = document.querySelector('.user');
+    const passwordInput = document.querySelector('.password');
+   
+    const usuario = usuarioInput.value.trim();
+    const password = passwordInput.value.trim();
 
+    let passwordModificada = modificarContraseña(password);
+    const arrayUsuarios = JSON.parse(localStorage.getItem('users'));
 
+    
+    for (let i = 0; i < arrayUsuarios.length; i++) {
+        if (arrayUsuarios[i].user === usuario && arrayUsuarios[i].pass === passwordModificada) {
+            arrayUsuarios.splice(i, 1);
+            usuarioEncontrado = true;
+            break;
+        }
+    }
 
+    if (usuarioEncontrado) {
+        localStorage.setItem('users', JSON.stringify(arrayUsuarios));
+        usuarioInput.value = '';
+        passwordInput.value = '';
+        mostrarMensajeEliminado();
+    } else {
+        alert("Usuario o contraseña incorrectos. No se pudo eliminar el usuario.");
+    }
+
+}
+
+function mostrarMensajeEliminado() {
+    document.getElementById("mensaje-eliminado").style.display = 'block';
+}
+
+function cerrarMensajeEliminado() {
+    document.getElementById('mensaje-eliminado').style.display = 'none';
+}
 
 
