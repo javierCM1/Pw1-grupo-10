@@ -1,4 +1,16 @@
 const formularioInicioSesion = document.getElementById('form-inicio_sesion');
+
+function modificarContraseña(password){
+
+    const longitud = password.length;
+    const mitad = Math.floor(longitud / 2);
+    const primeraMitad = password.slice(0, mitad);
+    const segundaMitad = password.slice(mitad);
+    const contraseñaModificada = segundaMitad + primeraMitad;
+    return contraseñaModificada;
+
+} 
+
 let logueado = false;
 
 formularioInicioSesion.addEventListener('submit', (event) => {
