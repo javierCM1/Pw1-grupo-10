@@ -1,8 +1,9 @@
 const titulo=document.getElementById('titulo');
 const botonAtras=document.getElementById('botonAtras');
 const infoUsuario=document.getElementById('infoUsuario');
+const nombreUsuario=document.getElementById('nombreUsuario')
 
-console.log(infoUsuario.innerHTML);
+console.log(nombreUsuario.innerHTML);
 // Para volver al inicio desde el boton que dice "Atras"
 const aInicioDesdeBotonAtras=botonAtras.addEventListener('click', () =>{
     event.preventDefault();
@@ -14,3 +15,5 @@ const aInicioDesdeBotonAtras=botonAtras.addEventListener('click', () =>{
 const aInicioDesdeTitulo=titulo.addEventListener('click',() =>{
  window.location.href='index.html'
 });
+
+// Para mostrar el nombre de usuario correspondiente en caso de estar logeado
