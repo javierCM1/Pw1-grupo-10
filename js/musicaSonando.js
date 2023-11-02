@@ -85,3 +85,22 @@ function redireccionarYMostrarDatos(arrayName) {
 
 
 
+
+const nombreUsuario=document.getElementById('nombreUsuario');
+let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+
+function mostrarDatosUsuario(){
+    let usuarioLogeadoEncontrado=false;
+    if(arrayUsuariosRegistrados!=null){
+        for(const usuarioRegistrado of arrayUsuariosRegistrados){
+            if(usuarioLogeadoEncontrado==false){
+                if(usuarioRegistrado.logueado == true){
+                    nombreUsuario.textContent=`${usuarioRegistrado.user}`;
+                    usuarioLogeadoEncontrado=true;
+                }
+               
+            }    
+        }
+    }
+}
+window.addEventListener('load',mostrarDatosUsuario);
