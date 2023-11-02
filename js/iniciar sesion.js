@@ -11,7 +11,8 @@ function modificarContraseña(password){
 
 } 
 
-let logueado = false;
+
+let contador = 0
 
 formularioInicioSesion.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -32,8 +33,11 @@ formularioInicioSesion.addEventListener('submit', (event) => {
             
             window.location.href = 'vista-principal.html';
             break; 
-        }else{
+        }else if( contador < arrayUsuariosRegistrados.length) {
+            contador++
+            if(contador === arrayUsuariosRegistrados.length){
             alert("usuario no encontrado")
+            }
         }
     }
 
