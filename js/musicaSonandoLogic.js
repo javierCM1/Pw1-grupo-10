@@ -57,19 +57,39 @@ function mostrarDatosArray() {
             labelEstrella.classList.add('estrella-label');
             labelEstrella.htmlFor = inputEstrella.id;
             
-            inputEstrella.addEventListener('click', () => {
-                if (inputEstrella.checked) {
-                    // If the star is checked, add the song to the favorites array
-                    const favoritesArray = JSON.parse(localStorage.getItem('favoritesArray')) || [];
-                    favoritesArray.push({
-                        nombre: cancion.nombre,
-                        album: cancion.album,
-                        duracion: cancion.duracion,
-                        vistas: cancion.vistas
-                    });
-                    localStorage.setItem('favoritesArray', JSON.stringify(favoritesArray));
-                }
+                    
+                    
+            
+         
+
+            
+               
+                inputEstrella.addEventListener('click', () => {
+
+
+                    if (inputEstrella.checked) {
+
+                       const userName = localStorage.getItem('user');
+                      console.log(userName);
+                       let arrayUsuarios = JSON.parse(localStorage.getItem('users'));
+                       console.log(arrayUsuarios);
+                       const usuario = arrayUsuarios.find((user) => user.user == userName);
+                      console.log(usuario);
+                       if(usuario){
+                        usuario.cancionesFav.push({
+                            nombre: cancion.nombre,
+                            album: cancion.album,
+                            duracion: cancion.duracion,
+                            vistas: cancion.vistas
+                        });
+
+                        // Guardar el objeto de usuario actualizado en el localStorage
+                        localStorage.setItem('users', JSON.stringify(usuario));
+                    }
+                    }
             });
+         
+            
 
             //Los agrego 
             divEstrella.appendChild(inputEstrella);
