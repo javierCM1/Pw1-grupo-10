@@ -29,6 +29,7 @@ formularioInicioSesion.addEventListener('submit', (event) => {
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
             usuarioRegistrado.logueado = true;
+            
             window.location.href = 'vista-principal.html';
             break; 
         }else{

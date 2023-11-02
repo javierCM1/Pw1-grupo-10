@@ -86,13 +86,6 @@ body, html {
     font-weight: 700;
 }
 
-.usuario-info {
-    background-color: red;
-    align-items: center;
-    margin: 20px;
-    justify-content: space-between;
-    color: white;
-}
 
 .usuario-nombre {
     margin-bottom: 0;
@@ -108,9 +101,11 @@ body, html {
 }
 
 .usuario-info {
-    width: 100%;
-    display: flex;
+    display: none;
     justify-content: end;
+    margin: 20px;
+    color: #fff;
+    width: 100%;
 }
 .sesion{
     color: #4ead00;

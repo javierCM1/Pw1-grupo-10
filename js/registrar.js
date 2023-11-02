@@ -15,8 +15,6 @@ class usuarios {
 let arrayUsuarios = JSON.parse(localStorage.getItem('users')) || [];
 const formulario = document.querySelector('.formulario');
 
-
-
 formulario.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -51,7 +49,7 @@ formulario.addEventListener('submit', (event) => {
 
         const userJSON = JSON.stringify(arrayUsuarios);
         localStorage.setItem('users', userJSON);
-
+  
         window.location.href = 'index.html'
     } catch (error) {
         alert(error.message);
