@@ -150,7 +150,7 @@ main {
 }
 
 
-.item-imagen {
+.item-imagen, .imagen-sidebar {
     position: relative;
     margin: 10px;
 }

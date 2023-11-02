@@ -1,6 +1,7 @@
 const tarjeta = document.getElementById('tarjeta');
 const cvc = document.getElementById('cvc');
 const nombre = document.getElementById('nombre');
+let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
 
 
 function validarFormulario(event) {
