@@ -56,6 +56,20 @@ function mostrarDatosArray() {
             const labelEstrella = document.createElement('label');
             labelEstrella.classList.add('estrella-label');
             labelEstrella.htmlFor = inputEstrella.id;
+            
+            inputEstrella.addEventListener('click', () => {
+                if (inputEstrella.checked) {
+                    // If the star is checked, add the song to the favorites array
+                    const favoritesArray = JSON.parse(localStorage.getItem('favoritesArray')) || [];
+                    favoritesArray.push({
+                        nombre: cancion.nombre,
+                        album: cancion.album,
+                        duracion: cancion.duracion,
+                        vistas: cancion.vistas
+                    });
+                    localStorage.setItem('favoritesArray', JSON.stringify(favoritesArray));
+                }
+            });
 
             //Los agrego 
             divEstrella.appendChild(inputEstrella);
