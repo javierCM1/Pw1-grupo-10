@@ -16,7 +16,7 @@ let logueado = false;
 formularioInicioSesion.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const usuarioInput = document.getElementById('usuario')
+    const usuarioInput = document.getElementById('usuarios')
     const passwordInput = document.getElementById('password')
 
     const usuario = usuarioInput.value.trim();
@@ -28,7 +28,7 @@ formularioInicioSesion.addEventListener('submit', (event) => {
 
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
-            logueado= true;
+            usuarioRegistrado.logueado = true;
             window.location.href = 'vista-principal.html';
             break; 
         }else{

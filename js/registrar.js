@@ -5,11 +5,17 @@ class usuarios {
         this.passRep = passRep;
         this.fecha = fecha;
         this.email = email;
+        this.premium = false;
+        this.logueado = false;
+        this.cancionesFav = null;
+        this.albunFav = null;
     }
 }
 
 let arrayUsuarios = JSON.parse(localStorage.getItem('users')) || [];
 const formulario = document.querySelector('.formulario');
+
+
 
 formulario.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -46,17 +52,12 @@ formulario.addEventListener('submit', (event) => {
         const userJSON = JSON.stringify(arrayUsuarios);
         localStorage.setItem('users', userJSON);
 
-        document.getElementById('mensaje-exito').style.display = 'flex';
-
+        window.location.href = 'index.html'
     } catch (error) {
         alert(error.message);
     }
 
 });
-
-function cerrarMensajeExito() {
-    document.getElementById('mensaje-exito').style.display = 'none';
-}
 
 function modificarContraseña(password){
 
@@ -68,12 +69,6 @@ function modificarContraseña(password){
         return contraseñaModificada;
 
 } 
-
-const BOTON = document.getElementById('botonInico');
-BOTON.addEventListener('click', (Event) => {
-    Event.preventDefault();
-    window.location.href = 'index.html';
-});
 
 function eliminarUsuario() {
     const usuarioInput = document.querySelector('.user');
