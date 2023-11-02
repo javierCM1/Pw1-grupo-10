@@ -59,6 +59,13 @@ li:last-child {
     font-size: 3em;
 }
 
+.cerrarItem{
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
 
 
 @media (max-width: 1280px) {

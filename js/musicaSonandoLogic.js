@@ -26,7 +26,7 @@ function mostrarDatosArray() {
             //Clase del boton play
             const elementoI = document.createElement('i');
             elementoI.classList.add('bi', 'bi-play-fill', 'playing');
-           
+            
 
                cambiarAlPlay(elementoI, cancion);
                const imagen = cancion.imagen;
@@ -56,6 +56,32 @@ function mostrarDatosArray() {
             const labelEstrella = document.createElement('label');
             labelEstrella.classList.add('estrella-label');
             labelEstrella.htmlFor = inputEstrella.id;
+            
+               
+                inputEstrella.addEventListener('click', () => {
+                    if (inputEstrella.checked) {
+                        const arrayUsuarios = JSON.parse(localStorage.getItem('users'));
+                        for (let usuarioLogueado of arrayUsuarios) {
+                            if (usuarioLogueado.logueado == true) {
+                                console.log(usuarioLogueado.user);
+                                // Verificar si la canción ya existe en la lista de canciones favoritas del usuario
+                                const cancionExistente = usuarioLogueado.cancionesFav.find(cancionFav => cancionFav.nombre === cancion.nombre && cancionFav.album === cancion.album);
+                                if (!cancionExistente) {
+                                    usuarioLogueado.cancionesFav.push({
+                                        nombre: cancion.nombre,
+                                        album: cancion.album,
+                                        duracion: cancion.duracion,
+                                        vistas: cancion.vistas
+                                    });
+                                    // Guardar el objeto de usuario actualizado en el localStorage
+                                    localStorage.setItem('users', JSON.stringify(arrayUsuarios));
+                                }
+                            }
+                        }
+                    }
+                });
+         
+            
 
             //Los agrego 
             divEstrella.appendChild(inputEstrella);

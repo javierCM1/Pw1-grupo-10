@@ -7,7 +7,7 @@ class usuarios {
         this.email = email;
         this.premium = false;
         this.logueado = false;
-        this.cancionesFav = null;
+        this.cancionesFav = [];
         this.albunFav = null;
     }
 }
