@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body onload="mostrarCancionesFavoritas()">
 
 
     <div id="contenedor">
@@ -33,13 +33,9 @@
                 </ul>
             </nav>
             <section id="descripcion-contenedor">
-                <article class="item-imagen">
-                    <img src="imagenes/albumcover1.jpg" alt="Imagen 1" width="200" height="200" id="imagen-lateral">
-                    <input type="checkbox" class="estrella-checkbox" id="estrella16">
-                    <label class="estrella-label" for="estrella16"></label>
-                </article>
-                <article id="descripcion">X (Multiply) es el segundo álbum de Ed Sheeran, que cuenta como primer single
-                    con Sing, una canción en la que colabora Pharrell Williams.</article>
+                
+                <article id="descripcion">
+                    .</article>
             </section>
         </div>
 
@@ -65,7 +61,7 @@
                     <div>Duración</div>
                     <div>Reproducciones</div>
                 </div>
-                <div class="fila">
+                <div class="fila" id="fila">
                     
                 </div>
             </article>
@@ -92,8 +88,8 @@
     </footer>
 
 
-    <script src="js/registrar.js"></script>
-    <script src="js/musicaSonandoLogic.js"></script>
+    <script src="js/favoritos.js"></script>
+    
 
 
 </body>

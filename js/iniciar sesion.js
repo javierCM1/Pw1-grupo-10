@@ -11,7 +11,8 @@ function modificarContraseña(password){
 
 } 
 
-let logueado = false;
+
+let contador = 0
 
 formularioInicioSesion.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -29,10 +30,18 @@ formularioInicioSesion.addEventListener('submit', (event) => {
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
             usuarioRegistrado.logueado = true;
+            const indexUsuario = arrayUsuariosRegistrados.findIndex(user => user.user === usuarioRegistrado.user);
+            if(indexUsuario !== -1){
+                arrayUsuariosRegistrados[indexUsuario] = usuarioRegistrado;
+                localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
+            }
             window.location.href = 'vista-principal.html';
             break; 
-        }else{
+        }else if( contador < arrayUsuariosRegistrados.length) {
+            contador++
+            if(contador === arrayUsuariosRegistrados.length){
             alert("usuario no encontrado")
+            }
         }
     }
 
