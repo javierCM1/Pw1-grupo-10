@@ -104,3 +104,13 @@ function mostrarDatosUsuario(){
     }
 }
 window.addEventListener('load',mostrarDatosUsuario);
+
+function cambiarEstarlogueado(){
+    const arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+    for(const usuarioRegistrado of arrayUsuariosRegistrados){
+        if(usuarioRegistrado.logueado == true){
+            usuarioRegistrado.logueado = false;
+            localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
+        }
+    }
+}
