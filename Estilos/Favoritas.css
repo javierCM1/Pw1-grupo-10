@@ -21,6 +21,22 @@ h1 {
     height: 50vh;
 }
 
+#tablaFav {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr;
+    margin: 5%;
+    border: 1px solid #cccccc;
+    overflow-y:scroll;
+    height: 50vh;
+}
+.fila-fav,
+#fila-uno-fav{
+    display: grid;
+    grid-template-columns: 0.7fr 3fr 3fr 2fr 3fr 1fr;
+    background-color: #cccccc;
+    gap:1px;
+}
+
 .fila,
 #fila-uno {
     display: grid;
@@ -28,6 +44,17 @@ h1 {
     background-color: #cccccc;
     gap:1px;
     
+}
+.fila-fav>div,
+#fila-uno-fav>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+    border-top: 1px solid #cccccc;
+    background-color: #282828;;
+    color:white;
+    position:relative;
 }
 
 .fila>div,
@@ -40,6 +67,12 @@ h1 {
     background-color: #282828;;
     color:white;
     position:relative;
+}
+
+#fila-uno-fav>div{
+    color: white;
+    background-color: #333;
+    font-weight: bold;
 }
 
 #fila-uno>div {
@@ -60,6 +93,7 @@ li:last-child {
 }
 
 .cerrarItem{
+    display: flex;
     position: relative;
     top: 0;
     right: 0;

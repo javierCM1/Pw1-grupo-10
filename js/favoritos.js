@@ -4,7 +4,7 @@ function mostrarCancionesFavoritas() {
     const usuarioLogueado = arrayUsuarios.find((usuario) => usuario.logueado === true);
     
     if (usuarioLogueado) {
-        const listaCanciones = document.getElementById('fila');
+        const listaCanciones = document.getElementById('fila-fav');
 
         usuarioLogueado.cancionesFav.forEach((cancion) => {
             const elementoItem = document.createElement('div');
@@ -12,25 +12,30 @@ function mostrarCancionesFavoritas() {
             const elementoAlbum = document.createElement('div');
             const elementoVistas = document.createElement('div');
             const elementoDuracion = document.createElement('div');
-
+            const elementoEliminar = document.createElement('div');
            
             const elementoI = document.createElement('i');
             elementoI.classList.add('bi', 'bi-play-fill', 'playing');
 
             cambiarAlPlay(elementoI, cancion);
+            elementoItem.appendChild(elementoI);
             
-         elementoItem.appendChild(elementoI);
+            
+            
+            
+            
+            const elementoCerrar = crearElementoCierre(cancion, usuarioLogueado, arrayUsuarios, listaCanciones);
+            
+            elementoEliminar.appendChild(elementoCerrar);
+          
 
-         const elementoCerrar = crearElementoCierre(cancion, usuarioLogueado, arrayUsuarios, listaCanciones);
-         
-         elementoCancion.appendChild(elementoCerrar);   
             elementoCancion.textContent = ` ${cancion.nombre}`;
             elementoAlbum.textContent = `${cancion.album}`;
             elementoVistas.textContent = `${cancion.vistas}`; 
             elementoDuracion.textContent = `${cancion.duracion}`;
 
            elementoItem.classList.add('item');
-            elementoCancion.classList.add('cancion');
+            elementoCancion.classList.add('tema');
             elementoAlbum.classList.add('album');
             elementoVistas.classList.add('vistas');
             elementoDuracion.classList.add('duracion');
@@ -42,6 +47,7 @@ function mostrarCancionesFavoritas() {
             listaCanciones.appendChild(elementoAlbum);
             listaCanciones.appendChild(elementoVistas);
             listaCanciones.appendChild(elementoDuracion);
+            listaCanciones.appendChild(elementoEliminar);
         });
     }
 }
@@ -83,20 +89,24 @@ function cambiarAlPlay (elementoI, cancion) {
 
 function crearElementoCierre(cancion, usuarioLogueado, arrayUsuarios, listaCanciones) {
     const elementoCerrar = document.createElement('i');
-    elementoCerrar.classList.add('bi', 'bi-x-lg', 'cerrarItem');
+    elementoCerrar.classList.add('bi-x-lg', 'cerrarItem');
     elementoCerrar.addEventListener('click', () => {
         // Encuentra el índice de la canción en cancionesFav
         const index = usuarioLogueado.cancionesFav.findIndex((favCancion) => favCancion.nombre === cancion.nombre);
         if (index !== -1) {
-            // Elimina la canción de la lista de favoritos
+            
             usuarioLogueado.cancionesFav.splice(index, 1);
 
-            // Actualiza el localStorage con la lista de favoritos modificada
+            
             localStorage.setItem('users', JSON.stringify(arrayUsuarios));
 
-            // Elimina la representación visual de la canción
-            const elementoCancion = elementoCerrar.parentNode; // Elemento del div que contiene la canción
+            
+            const elementoCancion = elementoCerrar.parentNode;
+             
             listaCanciones.removeChild(elementoCancion);
+            location.reload();
+            
+            
         }
     });
 
