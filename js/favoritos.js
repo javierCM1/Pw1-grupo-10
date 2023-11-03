@@ -131,3 +131,4 @@ function mostrarDatosUsuario(){
     }
 }
 window.addEventListener('load',mostrarDatosUsuario);
+window.addEventListener('load', mostrarCancionesFavoritas);
