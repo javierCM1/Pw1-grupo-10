@@ -1,4 +1,5 @@
 class usuarios {
+
     constructor(user, pass, passRep, fecha, email) {
         this.user = user;
         this.pass = pass;
@@ -10,6 +11,7 @@ class usuarios {
         this.cancionesFav = [];
         this.albunFav = null;
     }
+
 }
 
 let arrayUsuarios = JSON.parse(localStorage.getItem('users')) || [];
@@ -42,14 +44,14 @@ formulario.addEventListener('submit', (event) => {
 
         const passwordModificada = modificarContraseña(password);
         const passwordRepetidaModificada = modificarContraseña(passwordRepetida);
-        
+
         const UsuarioRegistrado = new usuarios(usuario, passwordModificada, passwordRepetidaModificada, fecha, email);
 
         arrayUsuarios.push(UsuarioRegistrado);
 
         const userJSON = JSON.stringify(arrayUsuarios);
         localStorage.setItem('users', userJSON);
-  
+
         window.location.href = 'index.html'
     } catch (error) {
         alert(error.message);
@@ -57,28 +59,45 @@ formulario.addEventListener('submit', (event) => {
 
 });
 
-function modificarContraseña(password){
 
-        const longitud = password.length;
-        const mitad = Math.floor(longitud / 2);
-        const primeraMitad = password.slice(0, mitad);
-        const segundaMitad = password.slice(mitad);
-        const contraseñaModificada = segundaMitad + primeraMitad;
-        return contraseñaModificada;
 
-} 
+function modificarContraseña(password) {
+
+    const longitud = password.length;
+    const mitad = Math.floor(longitud / 2);
+    const primeraMitad = password.slice(0, mitad);
+    const segundaMitad = password.slice(mitad);
+    const contraseñaModificada = segundaMitad + primeraMitad;
+    return contraseñaModificada;
+
+}
+
+function cerrarSesion() {
+    const arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+
+    for (const usuarioRegistrado of arrayUsuariosRegistrados) {
+
+        if (usuarioRegistrado.logueado) {
+            usuarioRegistrado.logueado = false;
+            localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
+            window.location.href = 'index.html';
+            break;
+        }
+    }
+   
+}
 
 function eliminarUsuario() {
     const usuarioInput = document.querySelector('.user');
     const passwordInput = document.querySelector('.password');
-   
+
     const usuario = usuarioInput.value.trim();
     const password = passwordInput.value.trim();
 
     let passwordModificada = modificarContraseña(password);
     const arrayUsuarios = JSON.parse(localStorage.getItem('users'));
 
-    
+
     for (let i = 0; i < arrayUsuarios.length; i++) {
         if (arrayUsuarios[i].user === usuario && arrayUsuarios[i].pass === passwordModificada) {
             arrayUsuarios.splice(i, 1);
@@ -91,19 +110,20 @@ function eliminarUsuario() {
         localStorage.setItem('users', JSON.stringify(arrayUsuarios));
         usuarioInput.value = '';
         passwordInput.value = '';
-        mostrarMensajeEliminado();
     } else {
         alert("Usuario o contraseña incorrectos. No se pudo eliminar el usuario.");
     }
 
 }
 
-function mostrarMensajeEliminado() {
-    document.getElementById("mensaje-eliminado").style.display = 'block';
+for (const usuarioRegistrado of arrayUsuarios) {
+    if (usuarioRegistrado.logueado) {
+        const usuarioInfoElement = document.querySelector('.usuario-info');
+        usuarioInfoElement.style.display = 'flex';
+        const eliminarUsuarioImput = document.querySelector('.eliminarUsuarioImput');
+        eliminarUsuarioImput.style.display = 'block';
+        const volverHome = document.getElementById('volverHome');
+        volverHome.href = 'vista-principal.html';
+        break;
+    }
 }
-
-function cerrarMensajeEliminado() {
-    document.getElementById('mensaje-eliminado').style.display = 'none';
-}
-
-

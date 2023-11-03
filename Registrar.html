@@ -17,7 +17,7 @@
         <div class="usuario-info">
             <span>
                 <p class="usuario-nombre">Nombre Usuario</p>
-                <a href="index.html" class="sesion">Cerrar sesión</a>
+                <a href="index.html" ondblclick="cerrarSesion()" class="sesion">Cerrar sesión</a>
             </span>
             <img src="imagenes/usericon.jpg" alt="Usuario">
         </div>
@@ -46,12 +46,12 @@
                     </div>
                     <div class="premium">
                         <a href="Premium.html" class="a">Premium</a>
-                        <a href="" onclick="eliminarUsuario()">Eliminar usuario</a>
+                        <a class="eliminarUsuarioImput" onclick="eliminarUsuario()">Eliminar usuario</a>
                     </div>
                 </div>
             </div>
             <div class="botonContain">
-                <a href="index.html" class="boton">Volver al home</a>
+                <a href="index.html" class="boton" id="volverHome">Volver al home</a>
                 <button type="submit" class="boton" name="save">Guardar</button>
             </div>
         </form>
