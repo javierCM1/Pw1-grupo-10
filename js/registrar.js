@@ -9,7 +9,7 @@ class usuarios {
         this.premium = false;
         this.logueado = false;
         this.cancionesFav = [];
-        this.albunFav = null;
+        this.albumsFav = null;
     }
 
 }
