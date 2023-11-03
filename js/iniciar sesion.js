@@ -21,6 +21,8 @@ formularioInicioSesion.addEventListener('submit', (event) => {
 
     const usuario = usuarioInput.value.trim();
     const password = passwordInput.value.trim();
+    const passwordModificada = modificarContraseña(password);
+
 
     if (!usuario || !password) {
         alert('Por favor, complete todos los campos.');
@@ -29,7 +31,7 @@ formularioInicioSesion.addEventListener('submit', (event) => {
 
     
     let usuarioEncontrado = false;
-
+    let contador = 0;
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
             
