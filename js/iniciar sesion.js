@@ -27,21 +27,17 @@ formularioInicioSesion.addEventListener('submit', (event) => {
         return;
     }
 
-    
+    const passwordModificada = modificarContraseña(password);
+
     let usuarioEncontrado = false;
 
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
-            
-            usuarioRegistrado.logueado = true;  
-            window.location.href = 'vista-principal.html';
+            usuarioRegistrado.logueado = true;
             localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
-            break; 
-        }else if( contador < arrayUsuariosRegistrados.length) {
-            contador++
-            if(contador === arrayUsuariosRegistrados.length){
-            alert("usuario no encontrado")
-            }
+            usuarioEncontrado = true;
+            window.location.href = 'vista-principal.html';
+            break;
         }
     }
 
@@ -49,5 +45,3 @@ formularioInicioSesion.addEventListener('submit', (event) => {
         alert('Usuario no encontrado o contraseña incorrecta.');
     }
 });
-
-
