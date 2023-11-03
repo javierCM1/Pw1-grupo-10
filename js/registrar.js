@@ -9,7 +9,7 @@ class usuarios {
         this.premium = false;
         this.logueado = false;
         this.cancionesFav = [];
-        this.albumsFav = null;
+        this.listaAlbumsFav = [];
     }
 
 }
@@ -155,9 +155,6 @@ function llenarFormularioPreCargado() {
 }
 
 window.addEventListener('load', llenarFormularioPreCargado);
-
-
-
 
 
 
