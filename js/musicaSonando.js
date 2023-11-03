@@ -86,10 +86,10 @@ function redireccionarYMostrarDatos(arrayName) {
 
 
 
-const nombreUsuario=document.getElementById('nombreUsuario');
-let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
 
 function mostrarDatosUsuario(){
+    const nombreUsuario=document.getElementById('nombreUsuario');
+    let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
     let usuarioLogeadoEncontrado=false;
     if(arrayUsuariosRegistrados!=null){
         for(const usuarioRegistrado of arrayUsuariosRegistrados){
@@ -104,3 +104,17 @@ function mostrarDatosUsuario(){
     }
 }
 window.addEventListener('load',mostrarDatosUsuario);
+
+function cambiarEstarlogueado(){
+    const arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+    console.log(arrayUsuariosRegistrados);
+    for(const usuarioRegistrado of arrayUsuariosRegistrados){
+        if(usuarioRegistrado.logueado == true){
+            usuarioRegistrado.logueado = false;
+            console.log(usuarioRegistrado.user)
+            localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
+            break;
+        }
+        console.log(usuarioRegistrado.logueado);
+    }
+}

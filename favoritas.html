@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="mostrarCancionesFavoritas()">
+<body>
 
 
     <div id="contenedor">
@@ -44,7 +44,7 @@
             <h1>Mis canciones favoritas</h1>
 
             <div id="usuario"><p id="nombreUsuario"></p></span>
-                <a href="index.html" class="sesion">Cerrar sesión</a>
+                <a href="index.html" class="sesion" onclick="cambiarEstarLogueado()">Cerrar sesión</a>
             </div>
             <div id="icono"><a href="Registrar.html"><img src="imagenes/usericon.jpg" alt="Foto de perfil"
                         id="iconoimg"></a>
@@ -53,15 +53,16 @@
         </header>
         <main>
 
-            <article id="tabla">
-                <div id="fila-uno">
+            <article id="tablaFav">
+                <div id="fila-uno-fav">
                     <div></div>
                     <div>Canción</div>
                     <div>Album</div>
                     <div>Duración</div>
                     <div>Reproducciones</div>
+                    <div>Cerrar</div>
                 </div>
-                <div class="fila" id="fila">
+                <div class="fila-fav" id="fila-fav">
                     
                 </div>
             </article>
@@ -89,7 +90,7 @@
 
 
     <script src="js/favoritos.js"></script>
-    
+    <script src="js/musicaSonando.js"></script>
 
 
 </body>
