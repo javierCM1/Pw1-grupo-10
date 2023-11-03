@@ -21,29 +21,23 @@ formularioInicioSesion.addEventListener('submit', (event) => {
 
     const usuario = usuarioInput.value.trim();
     const password = passwordInput.value.trim();
-    const passwordModificada = modificarContraseña(password);
-
 
     if (!usuario || !password) {
         alert('Por favor, complete todos los campos.');
         return;
     }
 
-    
+    const passwordModificada = modificarContraseña(password);
+
     let usuarioEncontrado = false;
-    let contador = 0;
+
     for (const usuarioRegistrado of arrayUsuariosRegistrados) {
         if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
-            
-            usuarioRegistrado.logueado = true;  
-            window.location.href = 'vista-principal.html';
+            usuarioRegistrado.logueado = true;
             localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
-            break; 
-        }else if( contador < arrayUsuariosRegistrados.length) {
-            contador++
-            if(contador === arrayUsuariosRegistrados.length){
-            alert("usuario no encontrado")
-            }
+            usuarioEncontrado = true;
+            window.location.href = 'vista-principal.html';
+            break;
         }
     }
 
@@ -51,5 +45,3 @@ formularioInicioSesion.addEventListener('submit', (event) => {
         alert('Usuario no encontrado o contraseña incorrecta.');
     }
 });
-
-
