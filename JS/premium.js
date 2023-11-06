@@ -51,6 +51,8 @@ const aInicioDesdeTitulo=titulo.addEventListener('click',() =>{
 });
 
 
+
+
 // Para mostrar el nombre de usuario correspondiente en caso de estar logeado
 function mostrarDatosUsuario(){
     let usuarioLogeadoEncontrado=false;
@@ -61,6 +63,7 @@ function mostrarDatosUsuario(){
                     infoUsuario.style.display='flex';
                     nombreUsuario.textContent=`${usuarioRegistrado.user}`;
                     usuarioLogeadoEncontrado=true;
+                   
                 }
                 else{
                     infoUsuario.style.display='none';

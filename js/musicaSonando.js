@@ -93,10 +93,17 @@ function mostrarDatosUsuario(){
     let usuarioLogeadoEncontrado=false;
     if(arrayUsuariosRegistrados!=null){
         for(const usuarioRegistrado of arrayUsuariosRegistrados){
-            if(usuarioLogeadoEncontrado==false){
-                if(usuarioRegistrado.logueado == true){
-                    nombreUsuario.textContent=`${usuarioRegistrado.user}`;
+            if(usuarioLogeadoEncontrado==false) {
+                if(usuarioRegistrado.logueado == true) {
+                      if(usuarioRegistrado.premium==true){
+                        nombreUsuario.textContent=`${usuarioRegistrado.user} (Premium)`
+                        
                     usuarioLogeadoEncontrado=true;
+                    
+                    }else{
+                        nombreUsuario.textContent=`${usuarioRegistrado.user}`;
+                        usuarioLogeadoEncontrado=true;
+                    }
                 }
                
             }    
@@ -116,5 +123,18 @@ function cambiarEstarlogueado(){
             break;
         }
         console.log(usuarioRegistrado.logueado);
+    }
+}
+
+function cancelarSuscripcion(){
+    const arrayUsuarios = JSON.parse(localStorage.getItem('users'));
+    for(const usuarioRegistrado of arrayUsuarios){
+        if(usuarioRegistrado.logueado == true){
+            if(usuarioRegistrado.premium = true);
+                
+                usuarioRegistrado.premium = false;
+            localStorage.setItem('users', JSON.stringify(arrayUsuarios));
+            break;
+        }
     }
 }

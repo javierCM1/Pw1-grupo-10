@@ -47,6 +47,10 @@ if(cvc.value == ""){
         document.getElementById('errores').innerHTML = msjError;
         return false
     } else {
+        for(const usuarioRegistrado of arrayUsuariosRegistrados){
+            if(usuarioRegistrado.logueado==true) {
+                usuarioRegistrado.premium=true;
+                localStorage.setItem('users',JSON.stringify(arrayUsuariosRegistrados));
         
         var modal = document.getElementById("ventanaModal");
         var span = document.getElementsByClassName("close")[0];
@@ -57,15 +61,26 @@ if(cvc.value == ""){
         window.onclick = function () {
             if (event.target == modal) {
                 modal.style.display = "none";
+                  
             }
         }
         event.preventDefault();
-        return true
-
-    }
-
-
+        
+        return true;
+         
+    
+    } 
 }
+if(usuarioRegistrado.logueado==false){
+    alert('No estas logueado, inicie sesion con un usuario para poder comprar el plan premium');
+    
+}
+        }
+        
+}
+
+
+
 
 function leerLaPost(){
         const titulo = document.getElementById('titulo');
@@ -87,4 +102,16 @@ function leerLaPost(){
 
         
         
+}
+function serPremium(){
+    for(const usuarioRegistrado of arrayUsuariosRegistrados){
+        if(usuarioRegistrado.logueado==true){
+            usuarioRegistrado.premium=true;
+            localStorage.setItem('users',JSON.stringify(arrayUsuariosRegistrados));
+        }else{
+            alert('No estas logueado');
+        }
+    }
+
+
 }
