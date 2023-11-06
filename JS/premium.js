@@ -4,6 +4,7 @@ const infoUsuario=document.getElementById('infoUsuario');
 const nombreUsuario=document.getElementById('nombreUsuario');
 const cerrarSesion=document.getElementById('cerrarSesion');
 let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+const fotoUsuario=document.getElementById('fotoUsuario')
 
 
 // Para volver al inicio desde el boton que dice "Atras"
@@ -78,4 +79,6 @@ function mostrarDatosUsuario(){
 window.addEventListener('load',mostrarDatosUsuario);
 
 
-// Para Cerrar sesion
+const aPerfil=fotoUsuario.addEventListener('click',() =>{
+    window.location.href="Registrar.html"
+});

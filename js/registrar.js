@@ -69,15 +69,15 @@ function eliminarUsuario() {
     const passwordRepetida = passwordRepetidaInput.value.trim();
     const fecha = fechaInput.value;
     const email = emailInput.value.trim();
-    
+
     let passwordModificada = modificarContraseña(password);
     let passwordModificadaRepetida = modificarContraseña(passwordRepetida);
     let usuarioEncontrado = false;
 
     for (let i = 0; i < arrayUsuarios.length; i++) {
-        if (arrayUsuarios[i].user === usuario && 
-            arrayUsuarios[i].pass === passwordModificada && 
-            arrayUsuarios[i].fecha === fecha && 
+        if (arrayUsuarios[i].user === usuario &&
+            arrayUsuarios[i].pass === passwordModificada &&
+            arrayUsuarios[i].fecha === fecha &&
             arrayUsuarios[i].passRep === passwordModificadaRepetida &&
             arrayUsuarios[i].email === email) {
 
@@ -154,13 +154,8 @@ function llenarFormularioPreCargado() {
     }
 }
 
+
 window.addEventListener('load', llenarFormularioPreCargado);
-
-
-
-
-
-
 
 
 
