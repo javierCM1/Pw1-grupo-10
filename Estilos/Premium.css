@@ -103,6 +103,9 @@ body{
     color: white;
     padding: 4%;
 }
+#fotoUsuario{
+    margin-left: 10px;
+}
 @media screen and (max-width:600px) {
     .body{
         font-size: 10%;
