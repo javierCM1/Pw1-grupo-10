@@ -31,8 +31,8 @@ function mostrarCancionesFavoritas() {
 
             elementoCancion.textContent = ` ${cancion.nombre}`;
             elementoAlbum.textContent = `${cancion.album}`;
-            elementoVistas.textContent = `${cancion.vistas}`; 
             elementoDuracion.textContent = `${cancion.duracion}`;
+            elementoVistas.textContent = `${cancion.vistas}`; 
 
            elementoItem.classList.add('item');
             elementoCancion.classList.add('tema');
@@ -45,10 +45,47 @@ function mostrarCancionesFavoritas() {
             listaCanciones.appendChild(elementoItem);
             listaCanciones.appendChild(elementoCancion);
             listaCanciones.appendChild(elementoAlbum);
-            listaCanciones.appendChild(elementoVistas);
             listaCanciones.appendChild(elementoDuracion);
+            listaCanciones.appendChild(elementoVistas);
             listaCanciones.appendChild(elementoEliminar);
         });
+        if(usuarioLogueado.cancionesFav.length==0){
+    
+            const fila = document.getElementById('fila-fav');
+            fila.classList.remove('#fila-fav')
+            fila.classList.add('fila-nada');
+            
+
+            const no = document.createElement('div');
+            const tiene = document.createElement('div');
+            const canciones = document.createElement('div');
+            const favoritas = document.createElement('div');
+            const carita = document.createElement('div'); 
+            const espacio = document.createElement('div');   
+            no.classList.add('nothing');
+            tiene.classList.add('nothing');
+            canciones.classList.add('nothing');
+            favoritas.classList.add('nothing');
+            carita.classList.add('bi','bi-emoji-sad');
+            
+
+
+            no.textContent = '';
+            tiene.textContent = 'No tiene  ';
+            canciones.textContent = 'canciones ';
+            favoritas.textContent = 'favoritas';
+            carita.textContent = '😢';
+
+            
+            listaCanciones.appendChild(no);
+            listaCanciones.appendChild(tiene);
+            listaCanciones.appendChild(canciones);
+            listaCanciones.appendChild(favoritas);
+            listaCanciones.appendChild(carita);
+            listaCanciones.appendChild(espacio);
+            
+            
+        }
     }
 }
 

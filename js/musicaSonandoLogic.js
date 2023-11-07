@@ -64,7 +64,6 @@ function mostrarDatosArray() {
                         for (let usuarioLogueado of arrayUsuarios) {
                             if (usuarioLogueado.logueado == true) {
                                 console.log(usuarioLogueado.user);
-                                // Verificar si la canción ya existe en la lista de canciones favoritas del usuario
                                 const cancionExistente = usuarioLogueado.cancionesFav.find(cancionFav => cancionFav.nombre === cancion.nombre && cancionFav.album === cancion.album);
                                 if (!cancionExistente) {
                                     usuarioLogueado.cancionesFav.push({
@@ -73,7 +72,7 @@ function mostrarDatosArray() {
                                         duracion: cancion.duracion,
                                         vistas: cancion.vistas
                                     });
-                                    // Guardar el objeto de usuario actualizado en el localStorage
+                                    
                                     localStorage.setItem('users', JSON.stringify(arrayUsuarios));
                                 }
                             }
