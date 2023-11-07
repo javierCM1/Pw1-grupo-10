@@ -111,6 +111,6 @@ body, html {
     color: #4ead00;
 }
 
-.eliminarUsuarioImput {
-   
+.Eliminar:hover {
+    color: red;
 }
