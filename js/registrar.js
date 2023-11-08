@@ -69,16 +69,13 @@ function eliminarUsuario() {
     const passwordRepetida = passwordRepetidaInput.value.trim();
     const fecha = fechaInput.value;
     const email = emailInput.value.trim();
-
-    let passwordModificada = modificarContraseña(password);
-    let passwordModificadaRepetida = modificarContraseña(passwordRepetida);
     let usuarioEncontrado = false;
 
     for (let i = 0; i < arrayUsuarios.length; i++) {
         if (arrayUsuarios[i].user === usuario &&
-            arrayUsuarios[i].pass === passwordModificada &&
+            arrayUsuarios[i].pass === password &&
             arrayUsuarios[i].fecha === fecha &&
-            arrayUsuarios[i].passRep === passwordModificadaRepetida &&
+            arrayUsuarios[i].passRep === passwordRepetida &&
             arrayUsuarios[i].email === email) {
 
             arrayUsuarios.splice(i, 1);
@@ -142,20 +139,15 @@ if (usuarioLogueado) {
     volverHome.href = 'index.html';
 }
 
-function llenarFormularioPreCargado() {
-    const usuarioLogueado = arrayUsuarios.find((usuario) => usuario.logueado);
-
-    if (usuarioLogueado) {
-        usuarioInput.value = usuarioLogueado.user;
-        passwordInput.value = modificarContraseña(usuarioLogueado.pass);
-        passwordRepetidaInput.value = modificarContraseña(usuarioLogueado.passRep);
-        fechaInput.value = usuarioLogueado.fecha;
-        emailInput.value = usuarioLogueado.email;
-    }
+if (usuarioLogueado) {
+    usuarioInput.value = usuarioLogueado.user;
+    passwordInput.value = usuarioLogueado.pass;
+    passwordRepetidaInput.value = usuarioLogueado.passRep;
+    fechaInput.value = usuarioLogueado.fecha;
+    emailInput.value = usuarioLogueado.email;
 }
 
 
-window.addEventListener('load', llenarFormularioPreCargado);
 
 
 
