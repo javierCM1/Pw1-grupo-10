@@ -95,6 +95,23 @@ function eliminarUsuario() {
 
 }
 
+function mostrarConfirmacion() {
+    const modal = document.getElementById("confirm-dialog");
+    modal.style.display = "block";
+
+    const confirmarSi = document.getElementById("confirm-yes");
+    const confirmarNo = document.getElementById("confirm-no");
+
+    confirmarSi.addEventListener("click", function() {
+        eliminarUsuario();
+        modal.style.display = "none";
+    });
+
+    confirmarNo.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+}
+
 
 function modificarContraseña(password) {
 

@@ -46,13 +46,20 @@
                     </div>
                     <div class="premium">
                         <a href="Premium.html" class="a">Premium</a>
-                        <a href="#" class="a Eliminar"  onclick="eliminarUsuario() ">Eliminar usuario</a>
+                        <a href="#" class="a Eliminar"  onclick="mostrarConfirmacion() ">Eliminar usuario</a>
                     </div>
                 </div>
             </div>
             <div class="botonContain">
                 <a href="index.html" class="boton" id="volverHome">Volver al home</a>
                 <button type="submit" class="boton" name="save">Guardar</button>
+            </div>
+            <div id="confirm-dialog" class="modal">
+                <div class="modal-content">
+                    <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+                    <button id="confirm-yes" class="botonE">Aceptar</button>
+                    <button id="confirm-no" class="botonE">Cancelar</button>
+                </div>
             </div>
         </form>
     </div>
