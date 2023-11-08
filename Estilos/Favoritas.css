@@ -32,7 +32,7 @@ h1 {
 .fila-fav,
 #fila-uno-fav{
     display: grid;
-    grid-template-columns: 0.7fr 3fr 3fr 2fr 3fr 1fr;
+    grid-template-columns: 0.7fr 3fr 3fr 3fr 2fr 1fr;
     background-color: #cccccc;
     gap:1px;
 }
@@ -40,7 +40,7 @@ h1 {
 .fila,
 #fila-uno {
     display: grid;
-    grid-template-columns: 0.7fr 3fr 3fr 2fr 3fr;
+    grid-template-columns: 0.7fr 3fr 3fr 3fr 2fr;
     background-color: #cccccc;
     gap:1px;
     

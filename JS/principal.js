@@ -47,7 +47,3 @@ function cargarAlbumesFavoritos() {
 }
 
 cargarAlbumesFavoritos();
-/* 
-function updateGallery() {
-}
- */
