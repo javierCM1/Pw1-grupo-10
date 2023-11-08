@@ -115,3 +115,16 @@ function serPremium(){
 
 
 }
+    function volver(){
+    const volverElement = document.getElementById('volver')
+    const usuarioLogueado = arrayUsuariosRegistrados.find(usuario => usuario.logueado);
+        {
+            if(usuarioLogueado){
+                volverElement.href = 'vista-principal.html';
+             } else{
+                    volverElement.href='index.html'
+             }
+        }
+                
+    }
+
