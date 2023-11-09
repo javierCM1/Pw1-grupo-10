@@ -87,20 +87,7 @@ function mostrarDatosArray() {
             divEstrella.appendChild(labelEstrella);
             elementoCancion.appendChild(divEstrella);
 
-            //Mismo procedimiento para el album
-            const divEstrellaAlbum = document.createElement('div');
-            divEstrellaAlbum.classList.add('estrella');
-            const inputEstrellaAlbum = document.createElement('input');
-            inputEstrellaAlbum.type = 'checkbox';
-            inputEstrellaAlbum.classList.add('estrella-checkbox');
-            inputEstrellaAlbum.id = `estrella-album-${cancion.nombre.replace(' ', '-')}`;
-            const labelEstrellaAlbum = document.createElement('label');
-            labelEstrellaAlbum.classList.add('estrella-label');
-            labelEstrellaAlbum.htmlFor = inputEstrellaAlbum.id;
         
-            divEstrellaAlbum.appendChild(inputEstrellaAlbum);
-            divEstrellaAlbum.appendChild(labelEstrellaAlbum);
-            elementoAlbum.appendChild(divEstrellaAlbum);
 
             //----------------------------------------------------------------------
 
