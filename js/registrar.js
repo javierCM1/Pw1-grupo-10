@@ -233,6 +233,8 @@ function mostrarDatosUsuario(){
     if(arrayUsuariosRegistrados!=null){
         for(const usuarioRegistrado of arrayUsuariosRegistrados){
             if(usuarioLogeadoEncontrado==false) {
+                premium.style.display='none';
+                cancelarSub.style.display='none';
                 if(usuarioRegistrado.logueado == true) {
                       if(usuarioRegistrado.premium==true){
                         nombreUsuario.textContent=`${usuarioRegistrado.user} (Premium)`
@@ -251,7 +253,7 @@ function mostrarDatosUsuario(){
                     premium.style.display='none';
                     cancelarSub.style.display='none';
                 } 
-            }    
+            }   
         }
     }
     else{
