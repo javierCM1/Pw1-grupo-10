@@ -147,6 +147,16 @@ const volverHome = document.getElementById('volverHome');
 
 const usuarioLogueado = arrayUsuarios.find((usuario) => usuario.logueado);
 
+const eliminarUsuarioMostrar = document.getElementById('eliminarUsuario');
+
+if (usuarioLogueado) {
+    eliminarUsuarioMostrar.style.display = 'block'
+
+} else {
+    eliminarUsuarioMostrar.style.display = 'none'
+}
+
+
 if (usuarioLogueado) {
     usuarioInfoElement.style.display = 'flex';
     volverHome.href = 'vista-principal.html';
@@ -165,7 +175,6 @@ if (usuarioLogueado) {
 }
 
 
-
 const cancelarSub=document.getElementById('cancelarSub')
 const premium=document.getElementById('Premium')
 let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
@@ -176,6 +185,8 @@ function mostrarDatosUsuario(){
     if(arrayUsuariosRegistrados!=null){
         for(const usuarioRegistrado of arrayUsuariosRegistrados){
             if(usuarioLogeadoEncontrado==false) {
+                premium.style.display='none';
+                cancelarSub.style.display='none';
                 if(usuarioRegistrado.logueado == true) {
                       if(usuarioRegistrado.premium==true){
                         nombreUsuario.textContent=`${usuarioRegistrado.user} (Premium)`
@@ -194,7 +205,7 @@ function mostrarDatosUsuario(){
                     premium.style.display='none';
                     cancelarSub.style.display='none';
                 } 
-            }    
+            }   
         }
     }
     else{
