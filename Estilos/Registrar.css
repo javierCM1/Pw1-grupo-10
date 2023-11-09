@@ -67,6 +67,13 @@ body, html {
     margin-top: 20px;
 }
 
+#Premium{
+    display: none;
+}
+
+#cancelarSub{
+    display: none;
+}
 .a {
     font-size: 0.9rem;
     color: #1ED760;
