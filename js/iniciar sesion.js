@@ -41,10 +41,7 @@ formularioInicioSesion.addEventListener('submit', (event) => {
                 break;
             }
         }
-    } else {
-        console.error('La variable arrayUsuariosRegistrados no es un array.');
     }
-
     if (!usuarioEncontrado) {
         alert('Usuario no encontrado o contraseña incorrecta.');
     }
