@@ -31,14 +31,18 @@ formularioInicioSesion.addEventListener('submit', (event) => {
 
     let usuarioEncontrado = false;
 
-    for (const usuarioRegistrado of arrayUsuariosRegistrados) {
-        if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
-            usuarioRegistrado.logueado = true;
-            localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
-            usuarioEncontrado = true;
-            window.location.href = 'vista-principal.html';
-            break;
+    if (Array.isArray(arrayUsuariosRegistrados)) {
+        for (const usuarioRegistrado of arrayUsuariosRegistrados) {
+            if (usuarioRegistrado.user === usuario && usuarioRegistrado.pass === passwordModificada) {
+                usuarioRegistrado.logueado = true;
+                localStorage.setItem('users', JSON.stringify(arrayUsuariosRegistrados));
+                usuarioEncontrado = true;
+                window.location.href = 'vista-principal.html';
+                break;
+            }
         }
+    } else {
+        console.error('La variable arrayUsuariosRegistrados no es un array.');
     }
 
     if (!usuarioEncontrado) {
