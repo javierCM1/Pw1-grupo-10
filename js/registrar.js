@@ -166,6 +166,55 @@ if (usuarioLogueado) {
 
 
 
+const cancelarSub=document.getElementById('cancelarSub')
+const premium=document.getElementById('Premium')
+let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+function mostrarDatosUsuario(){
+    const nombreUsuario=document.getElementById('nombreUsuario');
+    let arrayUsuariosRegistrados = JSON.parse(localStorage.getItem('users'));
+    let usuarioLogeadoEncontrado=false;
+    if(arrayUsuariosRegistrados!=null){
+        for(const usuarioRegistrado of arrayUsuariosRegistrados){
+            if(usuarioLogeadoEncontrado==false) {
+                if(usuarioRegistrado.logueado == true) {
+                      if(usuarioRegistrado.premium==true){
+                        nombreUsuario.textContent=`${usuarioRegistrado.user} (Premium)`
+                        
+                    usuarioLogeadoEncontrado=true;
+                    premium.style.display='none';
+                    cancelarSub.style.display='flex';
+                    }else{
+                        nombreUsuario.textContent=`${usuarioRegistrado.user}`;
+                        usuarioLogeadoEncontrado=true;
+                        cancelarSub.style.display='none';
+                        premium.style.display='flex';
+                    }
+                }
+                else{
+                    premium.style.display='none';
+                    cancelarSub.style.display='none';
+                } 
+            }    
+        }
+    }
+    else{
+        premium.style.display='none';
+        cancelarSub.style.display='none';
+    }
+}
+window.addEventListener('load',mostrarDatosUsuario);
 
+function cancelarSuscripcion(){
+    const arrayUsuarios = JSON.parse(localStorage.getItem('users'));
+    for(const usuarioRegistrado of arrayUsuarios){
+        if(usuarioRegistrado.logueado == true){
+            if(usuarioRegistrado.premium = true);
+                
+                usuarioRegistrado.premium = false;
+            localStorage.setItem('users', JSON.stringify(arrayUsuarios));
+            break;
+        }
+    }
+}
 
-
+cancelarSub.addEventListener('click', cancelarSuscripcion)
