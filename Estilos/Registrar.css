@@ -151,3 +151,7 @@ body, html {
 #confirm-no {
     cursor: pointer;
 }
+
+.Eliminar {
+    display: none;
+}

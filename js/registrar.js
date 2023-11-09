@@ -147,6 +147,16 @@ const volverHome = document.getElementById('volverHome');
 
 const usuarioLogueado = arrayUsuarios.find((usuario) => usuario.logueado);
 
+const eliminarUsuarioMostrar = document.getElementById('eliminarUsuario');
+
+if (usuarioLogueado) {
+    eliminarUsuarioMostrar.style.display = 'block'
+
+} else {
+    eliminarUsuarioMostrar.style.display = 'none'
+}
+
+
 if (usuarioLogueado) {
     usuarioInfoElement.style.display = 'flex';
     volverHome.href = 'vista-principal.html';
